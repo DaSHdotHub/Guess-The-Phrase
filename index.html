@@ -12,7 +12,35 @@
     <heading>
       <h1>Hello QuizGame</h1>
     </heading>
-    <div>
+    <nav></nav>
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <ul>
+            <li>Maybe some facts why quizgames are fun</li>
+            <li>Some info to the subject at hand, why was that context chosen?</li>
+            <li>General Info about the game</li>
+        </ul>
+    </section>
+    <section id="game-rules">
+        <h2>Game rules and how to play</h2>
+        <ul>
+            <li>How to play</li>
+            <li>What to expect</li>
+            <li>General rules</li>
+        </ul>
+    </section>
+    <main id="quiz-game">
+        <p>The idea will be to implement a quiz game, the set of data will be provided
+            List of Objects that will contain:
+        </p>
+            <ul>
+                <li>The phrase where one word was exchanged</li>
+                <li>The context where the phrase is from, e.g. name of book or movie</li>
+                <li>The correct word</li>
+                <li>A list of wrong answers</li>
+                <li>The wrong word from the phrase</li>
+            </ul>
+            <p>The Objectlist will be provided as a csv file inside the assets, on loadup it will be cached</p>
       <p>
         <h2>Just some basic addition to check js</h2>
         <label for="number1">Enter first number:</label>
@@ -22,7 +50,11 @@
         <button id="submit" type="submit">Calculate</button>
         <span id="result">2</span>
       </p>
-    </div>
+    </main>
+    <section id="highscore">
+        <h2>Highscore</h2>
+    </section>
+    <footer></footer>
     <script src="assets/js/script.js"></script>
   </body>
 </html>
