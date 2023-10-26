@@ -8,11 +8,22 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Title</title>
   </head>
+
   <body>
     <heading>
       <h1>Hello QuizGame</h1>
     </heading>
-    <nav></nav>
+    <nav>
+      <nav>
+        <ul id="menu">
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#game-rules">Rules</a></li>
+          <li><a href="#game-quiz">Quiz</a></li>
+          <li><a href="#game-highscore">Highscore</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </nav>
     <section id="introduction">
       <h2>Introduction</h2>
       <ul>
@@ -29,7 +40,7 @@
         <li>General rules</li>
       </ul>
     </section>
-    <main id="quiz-game">
+    <main id="game-quiz">
       <p>
         The idea will be to implement a quiz game, the set of data will be
         provided List of Objects that will contain:
@@ -67,9 +78,13 @@
         <p class="scores">Incorrect Guesses: <span id="incorrect">0</span></p>
       </div>
     </main>
-    <section id="highscore">
+    <section id="game-highscore">
       <h2>Highscore</h2>
     </section>
+    <section id="about">
+      <h2>About</h2>
+    </section>
+
     <footer></footer>
     <script src="assets/js/script.js"></script>
   </body>
