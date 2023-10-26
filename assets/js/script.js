@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 async function loadPhrases() {
     try {
         //await fetch returns a promise in form of an http object which is rather a representation of the JSON, it does not contain it actually.
-        const response = await fetch('/assets/data/phrases.json');
+        const response = await fetch('assets/data/phrases.json');
         //awair response returns a second promise, resolving the result of parsing the response body text as JSON.
         data = await response.json();
         //CallBack function that runs when data is loaded
@@ -57,6 +57,7 @@ function displayQuestion() {
     //Render data from JSON to DOM
     document.getElementById("display-question").textContent = questionObject.altered_phrase;
     document.getElementById("display-hint").textContent = questionObject.source;
+
     document.getElementById("answer1").textContent = displayOptions[0].displayValue;
     document.getElementById("answer2").textContent = displayOptions[1].displayValue;
     document.getElementById("answer3").textContent = displayOptions[2].displayValue;
