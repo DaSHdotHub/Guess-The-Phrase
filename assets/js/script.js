@@ -32,11 +32,16 @@ function displayQuestion() {
     wrongOptions = data[randomQuestionNumber].wrong_options;
     //Create possible answers array
     generateAnswerObject();
-    console.log(displayOptions);
 
     //Render data from JSON to DOM
     document.getElementById("display-question").textContent = questionObject.altered_phrase;
     document.getElementById("display-hint").textContent = questionObject.source;
+    document.getElementById("answer1").textContent = displayOptions[0].displayValue;
+    document.getElementById("answer2").textContent = displayOptions[1].displayValue;
+    document.getElementById("answer3").textContent = displayOptions[2].displayValue;
+    document.getElementById("answer4").textContent = displayOptions[3].displayValue;
+
+
 
     function generateAnswerObject() {
         //Pickup 3 random wrong answers from the dataset "wrong_options"
@@ -55,7 +60,6 @@ function displayQuestion() {
             answerCorrect: true
         });
         //Reorder elements
-        debugger;
         arraySize = answerOptions.length;
         for (i = 0; i < arraySize; i++) {
             randomNumber = Math.floor(Math.random() * answerOptions.length);
