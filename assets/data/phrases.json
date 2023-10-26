@@ -1,0 +1,352 @@
+[
+    {
+        "altered_phrase": "Luke, I am your developer.",
+        "original_phrase": "Luke, I am your father.",
+        "changed_word": "developer",
+        "original_word": "father",
+        "wrong_options": [
+            "programmer",
+            "coder",
+            "designer",
+            "analyst",
+            "engineer"
+        ],
+        "source": "Star Wars: Episode V - The Empire Strikes Back"
+    },
+    {
+        "altered_phrase": "There's no place like localhost.",
+        "original_phrase": "There's no place like home.",
+        "changed_word": "localhost",
+        "original_word": "home",
+        "wrong_options": [
+            "server",
+            "domain",
+            "database",
+            "URL",
+            "subnet"
+        ],
+        "source": "The Wizard of Oz"
+    },
+    {
+        "altered_phrase": "May the source code be with you.",
+        "original_phrase": "May the Force be with you.",
+        "changed_word": "source code",
+        "original_word": "Force",
+        "wrong_options": [
+            "algorithm",
+            "bug",
+            "commit",
+            "patch",
+            "binary"
+        ],
+        "source": "Star Wars: Episode IV - A New Hope"
+    },
+    {
+        "altered_phrase": "You can't handle the code!",
+        "original_phrase": "You can't handle the truth!",
+        "changed_word": "code",
+        "original_word": "truth",
+        "wrong_options": [
+            "script",
+            "debug",
+            "syntax",
+            "array",
+            "query"
+        ],
+        "source": "A Few Good Men"
+    },
+    {
+        "altered_phrase": "To iterate is human; to recurse, divine.",
+        "original_phrase": "To err is human; to forgive, divine.",
+        "changed_word": "recurse",
+        "original_word": "forgive",
+        "wrong_options": [
+            "loop",
+            "compile",
+            "run",
+            "debug",
+            "execute"
+        ],
+        "source": "Alexander Pope ('An Essay on Criticism')"
+    },
+    {
+        "altered_phrase": "One algorithm to rule them all.",
+        "original_phrase": "One ring to rule them all.",
+        "changed_word": "algorithm",
+        "original_word": "ring",
+        "wrong_options": [
+            "script",
+            "function",
+            "loop",
+            "database",
+            "protocol"
+        ],
+        "source": "J.R.R. Tolkien ('The Lord of the Rings')"
+    },
+    {
+        "altered_phrase": "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a code.",
+        "original_phrase": "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
+        "changed_word": "code",
+        "original_word": "wife",
+        "wrong_options": [
+            "script",
+            "library",
+            "module",
+            "database",
+            "compiler"
+        ],
+        "source": "Jane Austen ('Pride and Prejudice')"
+    },
+    {
+        "altered_phrase": "To be or not to be: that is the query.",
+        "original_phrase": "To be or not to be: that is the question.",
+        "changed_word": "query",
+        "original_word": "question",
+        "wrong_options": [
+            "code",
+            "bug",
+            "issue",
+            "loop",
+            "syntax"
+        ],
+        "source": "William Shakespeare ('Hamlet')"
+    },
+    {
+        "altered_phrase": "All happy families are alike; each unhappy family is unhappy because of a bug.",
+        "original_phrase": "All happy families are alike; each unhappy family is unhappy in its own way.",
+        "changed_word": "bug",
+        "original_word": "in its own way",
+        "wrong_options": [
+            "code",
+            "algorithm",
+            "server",
+            "syntax",
+            "database"
+        ],
+        "source": "Leo Tolstoy ('Anna Karenina')"
+    },
+    {
+        "altered_phrase": "Man is born free, and everywhere he is in chains of code.",
+        "original_phrase": "Man is born free, and everywhere he is in chains.",
+        "changed_word": "chains of code",
+        "original_word": "chains",
+        "wrong_options": [
+            "loops",
+            "algorithms",
+            "databases",
+            "servers",
+            "scripts"
+        ],
+        "source": "Jean-Jacques Rousseau ('The Social Contract')"
+    },
+    {
+        "altered_phrase": "The quick brown fox jumps over the lazy debugger.",
+        "original_phrase": "The quick brown fox jumps over the lazy dog.",
+        "changed_word": "debugger",
+        "original_word": "dog",
+        "wrong_options": [
+            "compiler",
+            "server",
+            "code",
+            "driver",
+            "database"
+        ],
+        "source": "English Pangram"
+    },
+    {
+        "altered_phrase": "O software, software! Wherefore art thou software?",
+        "original_phrase": "O Romeo, Romeo! Wherefore art thou Romeo?",
+        "changed_word": "software",
+        "original_word": "Romeo",
+        "wrong_options": [
+            "algorithm",
+            "script",
+            "module",
+            "platform",
+            "server"
+        ],
+        "source": "William Shakespeare ('Romeo and Juliet')"
+    },
+    {
+        "altered_phrase": "In the beginning was the Code, and the Code was with God, and the Code was God.",
+        "original_phrase": "In the beginning was the Word, and the Word was with God, and the Word was God.",
+        "changed_word": "Code",
+        "original_word": "Word",
+        "wrong_options": [
+            "Script",
+            "Function",
+            "Logic",
+            "Algorithm",
+            "Command"
+        ],
+        "source": "Bible, John 1:1"
+    },
+    {
+        "altered_phrase": "If you want to go fast, go alone. If you want to go far, go with a team of developers.",
+        "original_phrase": "If you want to go fast, go alone. If you want to go far, go with others.",
+        "changed_word": "team of developers",
+        "original_word": "others",
+        "wrong_options": [
+            "coding squad",
+            "debugging crew",
+            "programming posse",
+            "coding comrades",
+            "algorithm alliance"
+        ],
+        "source": "African Proverb"
+    },
+    {
+        "altered_phrase": "A coding journey of a thousand miles begins with a single line.",
+        "original_phrase": "A journey of a thousand miles begins with a single step.",
+        "changed_word": "line",
+        "original_word": "step",
+        "wrong_options": [
+            "bug",
+            "commit",
+            "loop",
+            "algorithm",
+            "script"
+        ],
+        "source": "Lao Tzu"
+    },
+    {
+        "altered_phrase": "The only thing we have to fear is fear itself... and buggy code.",
+        "original_phrase": "The only thing we have to fear is fear itself.",
+        "changed_word": "buggy code",
+        "original_word": "",
+        "wrong_options": [
+            "runtime errors",
+            "infinite loops",
+            "server crashes",
+            "security breaches",
+            "syntax errors"
+        ],
+        "source": "Franklin D. Roosevelt"
+    },
+    {
+        "altered_phrase": "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe’s source code.",
+        "original_phrase": "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.",
+        "changed_word": "source code",
+        "original_word": "",
+        "wrong_options": [
+            "database",
+            "algorithm",
+            "backend",
+            "framework",
+            "protocol"
+        ],
+        "source": "Albert Einstein (adapted)"
+    },
+    {
+        "altered_phrase": "Not all those who wander are lost in the code.",
+        "original_phrase": "Not all those who wander are lost.",
+        "changed_word": "in the code",
+        "original_word": "",
+        "wrong_options": [
+            "in the algorithm",
+            "in debugging",
+            "in the software",
+            "in the database",
+            "in the script"
+        ],
+        "source": "J.R.R. Tolkien ('The Fellowship of the Ring')"
+    },
+    {
+        "altered_phrase": "The course of true love never did run smooth, especially with bad code.",
+        "original_phrase": "The course of true love never did run smooth.",
+        "changed_word": "especially with bad code",
+        "original_word": "",
+        "wrong_options": [
+            "infinite loops",
+            "syntax errors",
+            "unoptimized algorithms",
+            "memory leaks",
+            "unhandled exceptions"
+        ],
+        "source": "William Shakespeare ('A Midsummer Night's Dream')"
+    },
+    {
+        "altered_phrase": "Where there is love, there is code.",
+        "original_phrase": "Where there is love, there is life.",
+        "changed_word": "code",
+        "original_word": "life",
+        "wrong_options": [
+            "algorithm",
+            "script",
+            "loop",
+            "debugging",
+            "runtime"
+        ],
+        "source": "Mahatma Gandhi"
+    },
+    {
+        "altered_phrase": "To code or not to code, that is the question.",
+        "original_phrase": "To be or not to be, that is the question.",
+        "changed_word": "code",
+        "original_word": "be",
+        "wrong_options": [
+            "program",
+            "debug",
+            "run",
+            "compile",
+            "design"
+        ],
+        "source": "William Shakespeare ('Hamlet')"
+    },
+    {
+        "altered_phrase": "Liberty, equality, code!",
+        "original_phrase": "Liberty, equality, fraternity!",
+        "changed_word": "code",
+        "original_word": "fraternity",
+        "wrong_options": [
+            "debugging",
+            "software",
+            "algorithm",
+            "runtime",
+            "scripting"
+        ],
+        "source": "French Revolution Motto"
+    },
+    {
+        "altered_phrase": "Life is what happens to you while you’re busy making other algorithms.",
+        "original_phrase": "Life is what happens to you while you’re busy making other plans.",
+        "changed_word": "algorithms",
+        "original_word": "plans",
+        "wrong_options": [
+            "codes",
+            "programs",
+            "scripts",
+            "designs",
+            "apps"
+        ],
+        "source": "John Lennon"
+    },
+    {
+        "altered_phrase": "The unexamined life is not worth coding for.",
+        "original_phrase": "The unexamined life is not worth living.",
+        "changed_word": "coding for",
+        "original_word": "living",
+        "wrong_options": [
+            "debugging",
+            "programming",
+            "scripting",
+            "compiling",
+            "designing"
+        ],
+        "source": "Socrates"
+    },
+    {
+        "altered_phrase": "In the end, we will remember not the words of our enemies, but the silence of our compilers.",
+        "original_phrase": "In the end, we will remember not the words of our enemies, but the silence of our friends.",
+        "changed_word": "compilers",
+        "original_word": "friends",
+        "wrong_options": [
+            "codes",
+            "algorithms",
+            "scripts",
+            "databases",
+            "servers"
+        ],
+        "source": "Martin Luther King Jr."
+    }
+]
