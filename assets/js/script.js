@@ -1,10 +1,12 @@
 //Read in the JSON file after DOM has loaded up.
 let data;
+let randomQuestionNumber;
 let answerOptions = [];
 let displayOptions = [];
 
 document.addEventListener("DOMContentLoaded", () => {
     loadPhrases();
+    checkAnswer();
 });
 
 async function loadPhrases() {
@@ -25,9 +27,28 @@ function onPhrasesLoaded() {
     displayQuestion();
 }
 
+function checkAnswer() {
+    let pushedButtons = document.getElementsByClassName('answer-button');
+    //This code snippet will return the pushed button as number.
+    for (let button of pushedButtons) {
+        button.addEventListener("click", (event) => {
+            if (displayOptions[parseInt(event.target.id.toString().slice(-1)) - 1].displayCorrect) {
+                alert("Genius! That was correct.");
+                incrementCorrectAnswers();
+                displayQuestion();
+            } else {
+                alert("Try again");
+                incrementWrongAnswers();
+            }
+
+        });
+    }
+}
+
+//Displays the question
 function displayQuestion() {
     //Create random number between 0 and length of dataArray
-    let randomQuestionNumber = (Math.floor(Math.random() * data.length));
+    randomQuestionNumber = (Math.floor(Math.random() * data.length));
     let questionObject = data[randomQuestionNumber];
     wrongOptions = data[randomQuestionNumber].wrong_options;
     //Create possible answers array
@@ -44,6 +65,9 @@ function displayQuestion() {
 
 
     function generateAnswerObject() {
+        //Flush answerOptions and DisplayOptions before filling with new data
+        answerOptions = [];
+        displayOptions = [];
         //Pickup 3 random wrong answers from the dataset "wrong_options"
         for (i = 0; i < 3; i++) {
             randomNumber = Math.floor(Math.random() * wrongOptions.length);
@@ -65,10 +89,21 @@ function displayQuestion() {
             randomNumber = Math.floor(Math.random() * answerOptions.length);
             displayOptions.push({
                 displayValue: answerOptions[randomNumber].answerValue,
-                displaCorrect: answerOptions[randomNumber].answerCorrect
+                displayCorrect: answerOptions[randomNumber].answerCorrect
             });
             //remove picked up dataset for next iteration
             answerOptions.splice(randomNumber, 1);
         }
     }
+}
+//Increment score for correct answers in th DOM
+function incrementCorrectAnswers() {
+
+    let oldScore = parseInt(document.getElementById("correct").innerText);
+    document.getElementById("correct").innerText = ++oldScore;
+}
+//Increment score for incorrect answers in th DOM
+function incrementWrongAnswers() {
+    let oldScore = parseInt(document.getElementById("incorrect").innerText);
+    document.getElementById("incorrect").innerText = ++oldScore;
 }
