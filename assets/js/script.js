@@ -32,13 +32,16 @@ function checkAnswer() {
     //This code snippet will return the pushed button as number.
     for (let button of pushedButtons) {
         button.addEventListener("click", (event) => {
-            if (displayOptions[parseInt(event.target.id.toString().slice(-1)) - 1].displayCorrect) {
+            let userResponse = displayOptions[parseInt(event.target.id.toString().slice(-1)) - 1].displayCorrect;
+            if (userResponse) {
+                userResponse = "correct";
                 alert("Genius! That was correct.");
-                incrementCorrectAnswers();
+                incrementScore(userResponse);
                 displayQuestion();
             } else {
+                userResponse = "incorrect";
                 alert("Try again");
-                incrementWrongAnswers();
+                incrementScore(userResponse);
             }
 
         });
@@ -98,13 +101,7 @@ function displayQuestion() {
     }
 }
 //Increment score for correct answers in th DOM
-function incrementCorrectAnswers() {
-
-    let oldScore = parseInt(document.getElementById("correct").innerText);
-    document.getElementById("correct").innerText = ++oldScore;
-}
-//Increment score for incorrect answers in th DOM
-function incrementWrongAnswers() {
-    let oldScore = parseInt(document.getElementById("incorrect").innerText);
-    document.getElementById("incorrect").innerText = ++oldScore;
+function incrementScore(userResponse) {
+    let oldScore = parseInt(document.getElementById(userResponse).innerText);
+    document.getElementById(userResponse).innerText = ++oldScore;
 }
