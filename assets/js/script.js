@@ -6,7 +6,9 @@ let displayOptions = [];
 
 document.addEventListener("DOMContentLoaded", () => {
     loadPhrases();
-    checkAnswer();
+    document.getElementById('answer-button-container').addEventListener("click", (event) => {
+        checkAnswer(event);
+    });
 });
 
 async function loadPhrases() {
@@ -23,33 +25,29 @@ async function loadPhrases() {
     }
 }
 
-function onPhrasesLoaded() {
-    displayQuestion();
-}
 
-function checkAnswer() {
-    let pushedButtons = document.getElementsByClassName('answer-button');
-    //This code snippet will return the pushed button as number.
-    for (let button of pushedButtons) {
-        button.addEventListener("click", (event) => {
-            let userResponse = displayOptions[parseInt(event.target.id.toString().slice(-1)) - 1].displayCorrect;
-            if (userResponse) {
-                userResponse = "correct";
-                alert("Genius! That was correct.");
-                incrementScore(userResponse);
-                displayQuestion();
-            } else {
-                userResponse = "incorrect";
-                alert("Try again");
-                incrementScore(userResponse);
-            }
-
-        });
+//Algorithm to check if clcked button is 'correct' or 'incorrect'
+function checkAnswer(event) {
+    //Get clicked answer-button
+    if (event.target.classList.contains('answer-button')) {
+        const index = parseInt(event.target.id.toString().slice(-1)) - 1;
+        if (displayOptions[index].displayCorrect) {
+            alert("Genius! That was correct.");
+            incrementScore('correct');
+            displayNextQuestion();
+        } else {
+            alert("Try again");
+            incrementScore('incorrect');
+        }
     }
 }
 
+function onPhrasesLoaded() {
+    displayNextQuestion();
+}
+
 //Displays the question
-function displayQuestion() {
+function displayNextQuestion() {
     //Create random number between 0 and length of dataArray
     randomQuestionNumber = (Math.floor(Math.random() * data.length));
     let questionObject = data[randomQuestionNumber];
@@ -101,7 +99,8 @@ function displayQuestion() {
     }
 }
 //Increment score for correct answers in th DOM
-function incrementScore(userResponse) {
-    let oldScore = parseInt(document.getElementById(userResponse).innerText);
-    document.getElementById(userResponse).innerText = ++oldScore;
+function incrementScore(type) {
+    const element = document.getElementById(type);
+    const oldScore = parseInt(element.innerText);
+    element.innerText = oldScore + 1;
 }
