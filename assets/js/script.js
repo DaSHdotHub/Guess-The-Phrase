@@ -11,11 +11,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+/**
+ * Callback function executed after the phrases are loaded.
+ * It triggers the display of the next question.
+ */
 function onPhrasesLoaded() {
     displayNextQuestion();
 }
 
-//Generates the answer object to fill in the button text
+/**
+ * Generates an array of answer objects, including wrong and one correct answers.
+ * 
+ * @param {Array} wrongOptions - Array containing potential wrong answers.
+ * @param {string} correctWord - The correct answer.
+ * @param {number} numberOfWrongAnswers - The number of wrong answers to be included.
+ * 
+ * @returns {Array} - An array of answer objects shuffled.
+ */
 function generateAnswerObject(wrongOptions, correctWord, numberOfWrongAnswers) {
 
     // Grab random wrong answers
@@ -33,7 +45,9 @@ function generateAnswerObject(wrongOptions, correctWord, numberOfWrongAnswers) {
     return fisherYatesShuffle([...selectedWrongOptions, correctOption]);
 }
 
-//Displays next question
+/**
+ * Displays the next question and possible answers on the screen.
+ */
 function displayNextQuestion() {
     //Create random number between 0 and length of dataArray
     randomQuestionNumber = (Math.floor(Math.random() * data.length));
@@ -53,7 +67,11 @@ function displayNextQuestion() {
         document.getElementById(`answer${i + 1}`).textContent = displayOptions[i].displayValue;
     }
 }
-//Algorithm to check if clicked button is 'correct' or 'incorrect'
+/**
+ * Checks if the clicked answer button corresponds to the correct answer.
+ * 
+ * @param {Event} event - The click event.
+ */
 function checkAnswer(event) {
     //Get clicked answer-button
     if (event.target.classList.contains('answer-button')) {
@@ -68,13 +86,22 @@ function checkAnswer(event) {
         }
     }
 }
-//Increment score for correct answers in th DOM
+/**
+ * Increases the score (either 'correct' or 'incorrect') in the DOM.
+ * 
+ * @param {string} type - Type of score to increment ('correct' or 'incorrect').
+ */
 function incrementScore(type) {
     const element = document.getElementById(type);
     const oldScore = parseInt(element.innerText);
     element.innerText = oldScore + 1;
 }
-//Shuffle an array with fisher yates algorithm
+/**
+ * Shuffles an array using the Fisher-Yates algorithm.
+ * 
+ * @param {Array} array - The array to shuffle.
+ * @returns {Array} - The shuffled array.
+ */
 function fisherYatesShuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -82,7 +109,9 @@ function fisherYatesShuffle(array) {
     }
     return array;
 }
-//Readin the JSON datafile
+/**
+ * Loads the phrases from a JSON datafile.
+ */
 async function loadPhrases() {
     try {
         //await fetch returns a promise in form of an http object which is rather a representation of the JSON, it does not contain it actually.
