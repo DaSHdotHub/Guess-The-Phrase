@@ -15,40 +15,43 @@ function onPhrasesLoaded() {
     displayNextQuestion();
 }
 
+//Generates the answer object to fill in the button text
+function generateAnswerObject(wrongOptions, correctWord, numberOfWrongAnswers) {
+
+    // Grab random wrong answers
+    const shuffledWrongOptions = fisherYatesShuffle([...wrongOptions]);
+    const selectedWrongOptions = shuffledWrongOptions.slice(0, numberOfWrongAnswers).map(option => ({
+        displayValue: option,
+        displayCorrect: false
+    }));
+
+    const correctOption = {
+        displayValue: correctWord,
+        displayCorrect: true
+    };
+
+    return fisherYatesShuffle([...selectedWrongOptions, correctOption]);
+}
+
 //Displays next question
 function displayNextQuestion() {
     //Create random number between 0 and length of dataArray
     randomQuestionNumber = (Math.floor(Math.random() * data.length));
     let questionObject = data[randomQuestionNumber];
-    wrongOptions = data[randomQuestionNumber].wrong_options;
-    //Create possible answers array
-    generateAnswerObject();
+    let wrongOptions = data[randomQuestionNumber].wrong_options;
+    // The number of wrong possible answers is one less than number of buttons to click.
+    const numberOfPossibleAnswers = document.getElementById("answer-button-container").children.length;
 
-    //Render data from JSON to DOM
+    // Generate possible answers
+    displayOptions = generateAnswerObject(wrongOptions, questionObject.original_word, numberOfPossibleAnswers - 1);
+
+    // Render data from JSON to DOM
     document.getElementById("display-question").textContent = questionObject.altered_phrase;
     document.getElementById("display-hint").textContent = questionObject.source;
 
-    document.getElementById("answer1").textContent = displayOptions[0].displayValue;
-    document.getElementById("answer2").textContent = displayOptions[1].displayValue;
-    document.getElementById("answer3").textContent = displayOptions[2].displayValue;
-    document.getElementById("answer4").textContent = displayOptions[3].displayValue;
-
-    function generateAnswerObject() {
-        // Grab 3 random wrong options
-        const shuffledWrongOptions = fisherYatesShuffle([...wrongOptions]);
-        const selectedWrongOptions = shuffledWrongOptions.slice(0, 3).map(option => ({
-            displayValue: option,
-            displayCorrect: false
-        }));
-
-        const correctOption = {
-            displayValue: data[randomQuestionNumber].original_word,
-            displayCorrect: true
-        };
-
-        displayOptions = fisherYatesShuffle([...selectedWrongOptions, correctOption]);
+    for (let i = 0; i < numberOfPossibleAnswers; i++) {
+        document.getElementById(`answer${i + 1}`).textContent = displayOptions[i].displayValue;
     }
-
 }
 //Algorithm to check if clicked button is 'correct' or 'incorrect'
 function checkAnswer(event) {
