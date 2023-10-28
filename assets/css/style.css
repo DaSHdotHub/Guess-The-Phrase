@@ -1,7 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Infant&family=Pixelify+Sans:wght@400;500;600&display=swap');
+
+/* CSS Variables */
+:root {
+    --main-bg-color: lightcyan;
+    --footer-bg-color: #160027;
+    --footer-text-color: #ffffff;
+}
+
+/* General styling */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: lightcyan;
+    background-color: var(--main-bg-color);
+    /* font-family: 'Pixelify Sans', sans-serif; */
+    /* Set a default font for the whole body */
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+footer {
+    height: fit-content;
+    width: 100%;
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+}
+
+footer>div {
+    text-align: center;
+    font-weight: 400;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 5%;
+    /* Ensure div takes the full width of the footer */
+}
+
+footer div>div {
+    margin: 0 3%;
+    /* 0 padding top and bottom, 15px padding left and right */
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 3%;
+}
+
+.icon h4 {
+    text-align: center;
+    margin-top: 0.25em;
+}
+
+/* Regular state - Icon size */
+.icon .fa-github {
+    color: var(--footer-text-color);
+    transition: transform 0.3s ease;
+}
+
+/* Hover state - Icon enlarged */
+.icon .fa-github:hover {
+    transform: scale(1.5);
 }
