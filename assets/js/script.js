@@ -1,19 +1,21 @@
-const QuizApp = {
-    data: [],
-    randomQuestionNumber: null,
-    displayOptions: [],
+class QuizApp {
+    constructor() {
+        this.data = [];
+        this.randomQuestionNumber = null;
+        this.displayOptions = [];
+        this.alreadyQuestioned = [];
+    }
 
     /**
-     * Initialize the QuizApp
-     */
-    init() {
-        this.loadPhrases().then(() => {
-            this.displayNextQuestion();
-        });
+    * Inits the application
+    */
+    async init() {
+        await this.loadPhrases();
+        this.displayNextQuestion();
         document.getElementById('answer-button-container').addEventListener("click", (event) => {
             this.checkAnswer(event);
         });
-    },
+    }
 
     /**
     * Loads the phrases from a JSON datafile.
@@ -30,37 +32,40 @@ const QuizApp = {
         } catch (error) {
             console.error("There was an error fetching the JSON file", error);
         }
-    },
+    }
 
     /** Callback function executed after the phrases are loaded.
     * It triggers the display of the next question.
     */
     onPhrasesLoaded() {
         this.displayNextQuestion();
-    },
+    }
 
     /**
     * Displays the next question and possible answers on the screen.
     */
     displayNextQuestion() {
-        //Create random number between 0 and length of dataArray
+
         this.randomQuestionNumber = (Math.floor(Math.random() * this.data.length));
+        if (this.alreadyQuestioned.includes(this.randomQuestionNumber)) {
+
+        } else {
+            this.alreadyQuestioned.push(randomQuestionNumber);
+        }
+
         let questionObject = this.data[this.randomQuestionNumber];
         let wrongOptions = this.data[this.randomQuestionNumber].wrong_options;
-        // The number of wrong possible answers is one less than number of buttons to click.
         const numberOfPossibleAnswers = document.getElementById("answer-button-container").children.length;
 
-        // Generate possible answers
         this.displayOptions = this.generateAnswerObject(wrongOptions, questionObject.original_word, numberOfPossibleAnswers - 1);
 
-        // Render data from JSON to DOM
         document.getElementById("display-question").textContent = questionObject.altered_phrase;
         document.getElementById("display-hint").textContent = questionObject.source;
 
         for (let i = 0; i < numberOfPossibleAnswers; i++) {
             document.getElementById(`answer${i + 1}`).textContent = this.displayOptions[i].displayValue;
         }
-    },
+    }
 
     /**
     * Generates an array of answer objects, including wrong and one correct answers.
@@ -72,8 +77,6 @@ const QuizApp = {
     * @returns {Array} - An array of answer objects shuffled.
     */
     generateAnswerObject(wrongOptions, correctWord, numberOfWrongAnswers) {
-
-        // Grab random wrong answers
         const shuffledWrongOptions = this.fisherYatesShuffle([...wrongOptions]);
         const selectedWrongOptions = shuffledWrongOptions.slice(0, numberOfWrongAnswers).map(option => ({
             displayValue: option,
@@ -86,7 +89,7 @@ const QuizApp = {
         };
 
         return this.fisherYatesShuffle([...selectedWrongOptions, correctOption]);
-    },
+    }
 
     /**
     * Checks if the clicked answer button corresponds to the correct answer.
@@ -106,7 +109,8 @@ const QuizApp = {
                 this.incrementScore('incorrect');
             }
         };
-    },
+    }
+
     /**
     * Increases the score (either 'correct' or 'incorrect') in the DOM.
     * 
@@ -116,7 +120,7 @@ const QuizApp = {
         const element = document.getElementById(type);
         const oldScore = parseInt(element.innerText);
         element.innerText = oldScore + 1;
-    },
+    }
 
     /**
     * Shuffles an array using the Fisher-Yates algorithm.
@@ -134,5 +138,6 @@ const QuizApp = {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-    QuizApp.init();
+    let app = new QuizApp();
+    app.init();
 });

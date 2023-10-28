@@ -9,6 +9,9 @@
 
 /* General styling */
 * {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overscroll-behavior-y: contain;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -18,10 +21,6 @@ body {
     background-color: var(--main-bg-color);
     /* font-family: 'Pixelify Sans', sans-serif; */
     /* Set a default font for the whole body */
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 header {
@@ -60,13 +59,28 @@ header {
     transition: transform 0.3s ease;
 }
 
-#game-quiz {
-    padding: 50px 0;
+section,
+main {
+    padding: 20px;
+    /* Add some space around the content */
+    background-color: #fff;
+    /* Assuming the plate is white, but you can adjust as needed */
+    border-radius: 10px;
+    /* Rounded edges */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Slight elevation effect */
+    max-width: 600px;
+    /* Adjust to your preference */
+    margin: 20px auto;
+    /* Center the plate if its width is less than its container's width */
+    transition: box-shadow 0.3s ease;
+    /* Optional: for a smooth effect when hovering the plate */
 }
 
-#game-quiz>h2 {
-    padding-top: 50px;
-    padding-bottom: 15px;
+/* Optional: Increase elevation on hover */
+section:hover,
+main:hover {
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 #display-question {
