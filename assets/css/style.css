@@ -11,7 +11,7 @@
 * {
     scroll-behavior: smooth;
     overflow-x: hidden;
-    overscroll-behavior-y: contain;
+    overscroll-behavior-y: none;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -42,6 +42,7 @@ header {
     justify-content: center;
     list-style-type: none;
     padding-top: 10px;
+    overflow: visible;
 }
 
 #menu a {
@@ -49,8 +50,8 @@ header {
     color: var(--footer-text-color);
     text-decoration: none;
     text-transform: uppercase;
-    padding: 0 15px;
     display: inline-block;
+    margin: 10px 30px;
 
 }
 
@@ -83,6 +84,14 @@ main:hover {
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
 }
 
+#game-rules {
+    text-align: right;
+}
+
+#game-quiz {
+    text-align: center;
+}
+
 #display-question {
     padding: 20px;
 }
@@ -111,16 +120,11 @@ footer>div {
     /* Ensure div takes the full width of the footer */
 }
 
-footer div>div {
-    margin: 0 3%;
-    /* 0 padding top and bottom, 15px padding left and right */
-}
-
 .icon {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 3%;
+    overflow: visible;
 }
 
 .icon h4 {
@@ -132,6 +136,7 @@ footer div>div {
 .icon .fa-github {
     color: var(--footer-text-color);
     transition: transform 0.3s ease;
+    margin: 10px;
 }
 
 /* Hover state - Icon enlarged */

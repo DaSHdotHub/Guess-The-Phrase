@@ -47,15 +47,9 @@ class QuizApp {
     displayNextQuestion() {
 
         this.randomQuestionNumber = (Math.floor(Math.random() * this.data.length));
-        if (this.alreadyQuestioned.includes(this.randomQuestionNumber)) {
-
-        } else {
-            this.alreadyQuestioned.push(randomQuestionNumber);
-        }
-
         let questionObject = this.data[this.randomQuestionNumber];
-        let wrongOptions = this.data[this.randomQuestionNumber].wrong_options;
-        const numberOfPossibleAnswers = document.getElementById("answer-button-container").children.length;
+        let wronlons = this.data[this.randomQuestionNumber].wrong_options;
+        constet numberOfPossibleAnswers = document.getElementById("answer-button-container").children.length;
 
         this.displayOptions = this.generateAnswerObject(wrongOptions, questionObject.original_word, numberOfPossibleAnswers - 1);
 
