@@ -40,26 +40,32 @@
       </ul>
     </section>
     <main id="game-quiz">
-      <p></p>
-      <h2>Display altered phrase:</h2>
-      <p id="display-question">The first question...</p>
-      <div id="answer-button-container">
-        <button class="answer-button" id="answer1">Answer #1</button>
-        <button class="answer-button" id="answer2">Answer #2</button>
-        <button class="answer-button" id="answer3">Answer #3</button>
-        <button class="answer-button" id="answer4">Answer #4</button>
-      </div>
-      <div>
-        <h3>Display Hint:</h3>
-        <p>
-          The phrase has something to do with:
-          <span id="display-hint"> hint... </span>
-        </p>
-      </div>
-      <div class="display-score">
-        <p class="scores">Correct Guesses: <span id="correct">0</span></p>
-        <p class="scores">Incorrect Guesses: <span id="incorrect">0</span></p>
-      </div>
+      <section>
+        <h2>Your guesses</h2>
+        <div class="display-score">
+          <p class="scores">Correct Guesses: <span id="correct">0</span></p>
+          <p class="scores">Incorrect Guesses: <span id="incorrect">0</span></p>
+        </div>
+      </section>
+      <section>
+        <h2>Display altered phrase:</h2>
+        <p id="display-question">The first question...</p>
+        <div id="answer-button-container">
+          <button class="answer-button" id="answer1">Answer #1</button>
+          <button class="answer-button" id="answer2">Answer #2</button>
+          <button class="answer-button" id="answer3">Answer #3</button>
+          <button class="answer-button" id="answer4">Answer #4</button>
+        </div>
+      </section>
+      <section id="game-hint">
+        <div>
+          <h3>Display Hint:</h3>
+          <p>
+            The phrase has something to do with:
+            <span id="display-hint"> hint... </span>
+          </p>
+        </div>
+      </section>
     </main>
     <section id="game-highscore">
       <h2>Highscore</h2>

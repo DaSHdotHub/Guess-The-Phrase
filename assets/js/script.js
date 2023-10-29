@@ -48,8 +48,8 @@ class QuizApp {
 
         this.randomQuestionNumber = (Math.floor(Math.random() * this.data.length));
         let questionObject = this.data[this.randomQuestionNumber];
-        let wronlons = this.data[this.randomQuestionNumber].wrong_options;
-        constet numberOfPossibleAnswers = document.getElementById("answer-button-container").children.length;
+        let wrongOptions = this.data[this.randomQuestionNumber].wrong_options;
+        let numberOfPossibleAnswers = document.getElementById("answer-button-container").children.length;
 
         this.displayOptions = this.generateAnswerObject(wrongOptions, questionObject.original_word, numberOfPossibleAnswers - 1);
 
