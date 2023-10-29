@@ -2,38 +2,49 @@
 
 /* CSS Variables */
 :root {
-    --main-bg-color: lightcyan;
-    --footer-bg-color: #160027;
-    --footer-text-color: #ffffff;
+    --main-bg-color: #00d5e885;
+    --header-text-color: #000000;
+    --header-bg-color: #ffffff;
+    --footer-text-color: #111111;
+    --footer-bg-color: #ffffff;
 }
 
 /* General styling */
 * {
     scroll-behavior: smooth;
     overflow-x: hidden;
-    overscroll-behavior-y: none;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
 body {
-    background-color: var(--main-bg-color);
-    /* font-family: 'Pixelify Sans', sans-serif; */
-    /* Set a default font for the whole body */
+    height: 100vw;
+    background-image: linear-gradient(180deg, white, var(--main-bg-color), white);
 }
+
+
 
 header {
     height: fit-content;
     width: 100%;
-    background-color: var(--footer-bg-color);
-    color: var(--footer-text-color);
+    color: var(--header-text-color);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px 0;
 }
+
+h1 {
+    font-family: 'Ysabeau Infant', sans-serif;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
 
 #menu {
     display: flex;
@@ -63,22 +74,14 @@ header {
 section,
 main {
     padding: 20px;
-    /* Add some space around the content */
     background-color: #fff;
-    /* Assuming the plate is white, but you can adjust as needed */
     border-radius: 10px;
-    /* Rounded edges */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    /* Slight elevation effect */
     max-width: 600px;
-    /* Adjust to your preference */
     margin: 20px auto;
-    /* Center the plate if its width is less than its container's width */
     transition: box-shadow 0.3s ease;
-    /* Optional: for a smooth effect when hovering the plate */
 }
 
-/* Optional: Increase elevation on hover */
 section:hover,
 main:hover {
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
@@ -96,15 +99,36 @@ main:hover {
     padding: 20px;
 }
 
+/* Flexbox Container for Buttons */
 #answer-button-container {
-    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Button Styling */
+.answer-button {
+    background-color: var(--main-bg-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+/* Slightly darker shade on hover */
+.answer-button:hover {
+    background-color: #00b5c2;                  
 }
 
 
 footer {
     height: fit-content;
     width: 100%;
-    background-color: var(--footer-bg-color);
     color: var(--footer-text-color);
 }
 
@@ -120,6 +144,7 @@ footer>div {
     /* Ensure div takes the full width of the footer */
 }
 
+/* The icons container */
 .icons {
     display: flex;
     flex-direction: row;
@@ -138,4 +163,23 @@ footer>div {
 /* Hover state - Icon enlarged */
 .icon:hover{
     transform: scale(1.5);
+}
+
+/* Responsive Design */
+/* Mobile design */
+@media only screen and (max-width: 768px) {     
+    #answer-button-container {
+        flex-direction: column;
+    }
+}
+/* Desktop design */
+@media only screen and (min-width: 769px) {     
+    #answer-button-container {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .answer-button {
+        flex-basis: calc(50% - 20px);
+    }
 }
