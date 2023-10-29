@@ -21,15 +21,17 @@
         </ul>
       </nav>
     </header>
-    <section id="introduction">
+    <section class="outer-segment" id="introduction">
       <h2>Introduction</h2>
-      <ul>
-        <li>Maybe some facts why quizgames are fun</li>
-        <li>Some info to the subject at hand, why was that context chosen?</li>
-        <li>General Info about the game</li>
-      </ul>
+      <br><h3>A Twist on Words: The Fun Phrases Quiz!</h3>
+      <br><p>Ever found yourself chuckling at a phrase that's just... off? Whether it's a word out of place or a hilariously incorrect term, sometimes our language can take an unexpected and humorous turn. This quiz game dives right into this whimsical world of words, challenging you to spot the odd one out and correct the quirky phrases.</p>
+      <br><p>In a world where 'IT' often demands seriousness, why not take a light-hearted break? Not only does this game test your linguistic agility, but it also reminds us that it's okay to have a laugh, even at our own expense. So dive in, enjoy the play on words, and remember: it's all in good fun!</p>
+      <audio controls>
+        <source src="assets/media/intro.m4a" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
     </section>
-    <section id="game-rules">
+    <section class="outer-segment" id="game-rules">
       <h2>Game rules and how to play</h2>
       <ul>
         <li>How to play</li>
@@ -37,15 +39,15 @@
         <li>General rules</li>
       </ul>
     </section>
-    <main id="game-quiz">
-      <section>
-        <h2>Your guesses</h2>
+    <main class="outer-segment" id="game-quiz">
+      <section class="game-details" id="game-results">
+        <h2>Results</h2>
         <div class="display-score">
           <p class="scores">Correct Guesses: <span id="correct">0</span></p>
           <p class="scores">Incorrect Guesses: <span id="incorrect">0</span></p>
         </div>
       </section>
-      <section>
+      <section class="game-details">
         <h2>Display altered phrase:</h2>
         <p id="display-question">The first question...</p>
         <div id="answer-button-container">
@@ -55,7 +57,7 @@
           <button class="answer-button" id="answer4">Answer #4</button>
         </div>
       </section>
-      <section id="game-hint">
+      <section class="game-details" id="game-hint">
         <div>
           <h3>Display Hint:</h3>
           <p>
