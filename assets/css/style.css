@@ -120,26 +120,22 @@ footer>div {
     /* Ensure div takes the full width of the footer */
 }
 
-.icon {
+.icons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     overflow: visible;
-}
-
-.icon h4 {
-    text-align: center;
-    margin-top: 0.25em;
+    padding: 0 20px;
 }
 
 /* Regular state - Icon size */
-.icon .fa-github {
+.icon{
     color: var(--footer-text-color);
     transition: transform 0.3s ease;
     margin: 10px;
 }
 
 /* Hover state - Icon enlarged */
-.icon .fa-github:hover {
+.icon:hover{
     transform: scale(1.5);
 }
