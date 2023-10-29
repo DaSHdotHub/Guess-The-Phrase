@@ -70,6 +70,10 @@ h1 {
     transition: transform 0.3s ease;
 }
 
+#introduction {
+    text-align: justify;
+}
+
 section,
 main {
     padding: 20px;
@@ -82,7 +86,7 @@ main {
 }
 
 main {
-    background-image: url("../img/thinker.png");
+    background-image: url("../img/thinker.webp");
     background-repeat: no-repeat;
     background-size:contain;
 }
