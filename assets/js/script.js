@@ -45,11 +45,21 @@ class QuizApp {
     * Displays the next question and possible answers on the screen.
     */
     displayNextQuestion() {
+        do {
+            this.randomQuestionNumber = Math.floor(Math.random() * this.data.length);
+        } while (this.alreadyQuestioned.includes(this.randomQuestionNumber));
+        this.alreadyQuestioned.push(this.randomQuestionNumber);
+        if (this.alreadyQuestioned.length === this.data.length) {
+            this.alreadyQuestioned = [];
+            alert("Congratulation! You corrected all phrases in this game.");
+            //TODO: Let the user decide to go for another round
+        }
 
-        this.randomQuestionNumber = (Math.floor(Math.random() * this.data.length));
         let questionObject = this.data[this.randomQuestionNumber];
         let wrongOptions = this.data[this.randomQuestionNumber].wrong_options;
         let numberOfPossibleAnswers = document.getElementById("answer-button-container").children.length;
+
+
 
         this.displayOptions = this.generateAnswerObject(wrongOptions, questionObject.original_word, numberOfPossibleAnswers - 1);
 
