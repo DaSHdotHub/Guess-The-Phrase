@@ -210,52 +210,52 @@
         "source": "Lao Tzu"
     },
     {
-        "altered_phrase": "The only thing we have to fear is fear itself... and buggy code.",
+        "altered_phrase": "The only thing we have to fear is the internet itself",
         "original_phrase": "The only thing we have to fear is fear itself.",
         "changed_word": "buggy code",
-        "original_word": "",
+        "original_word": "fear",
         "wrong_options": [
-            "runtime errors",
-            "infinite loops",
-            "server crashes",
-            "security breaches",
-            "syntax errors"
+            "the runtime errors",
+            "the infinite loops",
+            "the server crashes",
+            "the security breaches",
+            "the syntax errors"
         ],
         "source": "Franklin D. Roosevelt"
     },
     {
-        "altered_phrase": "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe’s source code.",
+        "altered_phrase": "Two things are infinite: the Internet of things and human stupidity; and I'm not sure about the Internet of things.",
         "original_phrase": "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.",
-        "changed_word": "source code",
-        "original_word": "",
+        "changed_word": "Internet of things",
+        "original_word": "stupidity",
         "wrong_options": [
-            "database",
-            "algorithm",
-            "backend",
-            "framework",
-            "protocol"
+            "the Cloud",
+            "the Blockchain",
+            "Hyperautomation",
+            "tech industry",
+            "metaverse"
         ],
-        "source": "Albert Einstein (adapted)"
+        "source": "Albert Einstein"
     },
     {
-        "altered_phrase": "Not all those who wander are lost in the code.",
+        "altered_phrase": "Not all those who debug are lost.",
         "original_phrase": "Not all those who wander are lost.",
-        "changed_word": "in the code",
-        "original_word": "",
+        "changed_word": "debug",
+        "original_word": "wander",
         "wrong_options": [
-            "in the algorithm",
-            "in debugging",
-            "in the software",
-            "in the database",
-            "in the script"
+            "unittest",
+            "review",
+            "refactor",
+            "optimize",
+            "do OOP "
         ],
         "source": "J.R.R. Tolkien ('The Fellowship of the Ring')"
     },
     {
-        "altered_phrase": "The course of true love never did run smooth, especially with bad code.",
+        "altered_phrase": "The course of SCRUM never did run smooth.",
         "original_phrase": "The course of true love never did run smooth.",
-        "changed_word": "especially with bad code",
-        "original_word": "",
+        "changed_word": "SCRUM",
+        "original_word": "true love",
         "wrong_options": [
             "infinite loops",
             "syntax errors",

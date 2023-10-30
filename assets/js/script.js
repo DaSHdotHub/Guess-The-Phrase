@@ -141,7 +141,25 @@ class QuizApp {
     }
 };
 
-document.addEventListener("DOMContentLoaded", () => {
+/**
+ *Toggle the display of the audio controls
+ */
+function revealAudioBtn(){
+    document.getElementById('revealAudioBtn').addEventListener('click', function() {
+        var audioControl = document.getElementById('audioControl');
+        var buttonControl = document.getElementById('revealAudioBtn');
+        
+        if (audioControl.style.display === "none") {
+            audioControl.style.display = "block";
+            buttonControl.style.display = "none";
+        } else {
+            audioControl.style.display = "none";
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    revealAudioBtn();
     let app = new QuizApp();
     app.init();
 });
