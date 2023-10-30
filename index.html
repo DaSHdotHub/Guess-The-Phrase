@@ -9,7 +9,6 @@
     <title>Guess the phrase</title>
     <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico" />
   </head>
-
   <body>
     <header>
       <h1>Guess the phrase</h1>
@@ -23,7 +22,7 @@
     </header>
     <section class="outer-segment" id="introduction">
       <h2>Introduction</h2>
-      <br><h3>A Twist on Words: The Fun Phrases Quiz!</h3>
+      <h3>A Twist on Words: The Fun Phrases Quiz!</h3>
       <br><p>Ever found yourself chuckling at a phrase that's just... off? Whether it's a word out of place or a hilariously incorrect term, sometimes our language can take an unexpected and humorous turn. This quiz game dives right into this whimsical world of words, challenging you to spot the odd one out and correct the quirky phrases.</p>
       <br><p>In a world where 'IT' often demands seriousness, why not take a light-hearted break? Not only does this game test your linguistic agility, but it also reminds us that it's okay to have a laugh, even at our own expense. So dive in, enjoy the play on words, and remember: it's all in good fun!</p>
       <button class="button reveal-btn" id="reveal-intro-btn">Too lazy to read?</button>
@@ -45,7 +44,7 @@
       <p>
         So, word warrior, are you ready to wrestle with the quirks and quips of our language? Dive deep, decipher diligently, and above all, delight in the discourse!
       </p>
-      <button class="button reveal-btn" id="reveal-howto-btn">Rather listen to the how to?</button>
+      <button class="button reveal-btn" id="reveal-howto-btn">Rather listen to the <i>how to</i> ?</button>
       <audio controls class="audio" id="audio-control-howto" style="display:none;">
         <source src="assets/media/howto.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
@@ -70,8 +69,8 @@
       <section class="game-details" id="game-results">
         <h3>Results</h3>
         <div class="display-score">
-          <p class="scores" id="correct-score">Correct Guesses: <span id="correct">0</span></p>
-          <p class="scores" id="incorrect-score">Incorrect Guesses: <span id="incorrect">0</span></p>
+          <p class="scores" id="correct">Correct Guesses: <span id="correct-score"">0</span></p>
+          <p class="scores" id="incorrect">Incorrect Guesses: <span id="incorrect-score"">0</span></p>
         </div>
       </section>
       <section class="game-details">
@@ -87,13 +86,14 @@
         </div>
         </div>
       </section>
-      <section class="game-details" id="game-hint">
-        <div>
-          <h3>Display Hint:</h3>
-          <p>
-            The phrase has something to do with:
-          </p>
-          <span id="display-hint"> hint... </span>
+      <section class="game-details" id="reveal-game-hint">
+        <h3 id="game-hint-header">Show me the hint</h3>
+        <div id="game-hint" style="display:none;">
+          <h3>The phrase has something to do with:</h3>
+          <br>
+          <p id="display-hint"> Start the quiz first for a hint...</p>
+          <br>
+          <p><i>Click again to close this hint</i></p>
         </div>
       </section>
     </main>
@@ -130,7 +130,6 @@
         </div>
       </div>
     </footer>
-
     <script src="assets/js/script.js"></script>
     <script
       src="https://kit.fontawesome.com/8553d96c4f.js"

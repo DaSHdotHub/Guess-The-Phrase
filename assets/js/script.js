@@ -7,10 +7,12 @@ class QuizApp {
     }
 
     /**
-    * Inits the application
+    * Inits the application and resets the results to 0
     */
     async init() {
         await this.loadPhrases();
+        document.getElementById('correct-score').innerText = 0;
+        document.getElementById('incorrect-score').innerText = 0;
         this.displayNextQuestion();
         document.getElementById('answer-button-container').addEventListener("click", (event) => {
             this.checkAnswer(event);
@@ -50,9 +52,7 @@ class QuizApp {
         } while (this.alreadyQuestioned.includes(this.randomQuestionNumber));
         this.alreadyQuestioned.push(this.randomQuestionNumber);
         if (this.alreadyQuestioned.length === this.data.length) {
-            this.alreadyQuestioned = [];
-            alert("Congratulation! You corrected all phrases in this game.");
-            //TODO: Let the user decide to go for another round
+           this.gameFinished();
         }
 
         let questionObject = this.data[this.randomQuestionNumber];
@@ -105,12 +105,12 @@ class QuizApp {
         if (event.target.classList.contains('answer-button')) {
             const index = parseInt(event.target.id.toString().slice(-1)) - 1;
             if (this.displayOptions[index].displayCorrect) {
-                this.incrementScore('correct');
-                this.flashScore('correct-score');
+                this.incrementScore('correct-score');
+                this.flashScore('correct');
                 this.displayNextQuestion();
             } else {
-                this.incrementScore('incorrect');
-                this.flashScore('incorrect-score');
+                this.incrementScore('incorrect-score');
+                this.flashScore('incorrect');
             }
         };
     }
@@ -127,14 +127,14 @@ class QuizApp {
     }
 
     /**
-     * Pulses either the correct or incorrect score for visual feedback.
+     * Pulses either the correct or incorrect row for visual feedback.
      * 
      * @param {string} type - Type of score to pulse green or red.
      */
     flashScore(type) {
         let element = document.getElementById(type);
         let pulse;
-        if (type === 'correct-score') {
+        if (type === 'correct') {
             pulse = 'greenPulse';
         } else {
             pulse = 'redPulse';
@@ -158,6 +158,16 @@ class QuizApp {
             [array[i], array[j]] = [array[j], array[i]];
         }
         return array;
+    }
+
+    /**
+     * On finish alert the user, reset the alreadyQuestioned Array, reset the game-section of the DOM.
+     */
+    gameFinished(){
+        this.alreadyQuestioned = [];
+        alert("Congratulation! You've corrected all phrases in this game. Press ok if you want to play again.");
+        document.getElementById('game').style.display = "none";
+        document.getElementById('reveal-game-btn').style.display = 'block'
     }
 };
 
@@ -192,9 +202,25 @@ function revealAudioBtn(buttonId, audioControlId){
     });
 }
 
+/**
+*Toggle the display of the hint of the quiz
+*/
+function revealHint(){
+    document.getElementById('reveal-game-hint').addEventListener('click', function(event) {
+        if (document.getElementById('game-hint').style.display === 'none'){
+            document.getElementById('game-hint').style.display = 'block';
+            document.getElementById('game-hint-header').style.display = 'none';
+        } else {
+            document.getElementById('game-hint').style.display = 'none';
+            document.getElementById('game-hint-header').style.display = 'block';
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     revealAudioBtn('reveal-intro-btn','audio-control-intro');
     revealAudioBtn('reveal-howto-btn','audio-control-howto');
     revealAudioBtn('reveal-rules-btn','audio-control-rules');
     revealGame();
+    revealHint();
 });
