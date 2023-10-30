@@ -68,7 +68,8 @@ h3 {
 /*Styling for content*/
 p,
 button,
-section>div {
+section>div,
+li {
     font-family: var(--font-for-content);
     font-weight: 400;
 }
@@ -141,18 +142,22 @@ main {
 }
 
 /*make space for spedific button*/
-#reveal-audio-btn {
+.reveal-btn {
     margin: 20px 0px;
 }
 
 /*make space for audio control*/
-#audio-control {
+.audio {
     margin: 20px 0px;
 }
 
-/*Styling for rules section*/
-#game-rules {
+/*Styling for h3 header above the rules section*/
+#game-rules > h2{
     text-align: right;
+}
+
+#game-rules{
+    text-align: justify;
 }
 
 /*Styling for quiz section*/

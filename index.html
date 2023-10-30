@@ -16,8 +16,8 @@
       <nav>
         <ul id="menu">
           <li><a href="#introduction">Introduction</a></li>
-          <li><a href="#game-rules">Rules</a></li>
           <li><a href="#game-quiz">Quiz</a></li>
+          <li><a href="#game-rules">Rules</a></li>
         </ul>
       </nav>
     </header>
@@ -26,19 +26,42 @@
       <br><h3>A Twist on Words: The Fun Phrases Quiz!</h3>
       <br><p>Ever found yourself chuckling at a phrase that's just... off? Whether it's a word out of place or a hilariously incorrect term, sometimes our language can take an unexpected and humorous turn. This quiz game dives right into this whimsical world of words, challenging you to spot the odd one out and correct the quirky phrases.</p>
       <br><p>In a world where 'IT' often demands seriousness, why not take a light-hearted break? Not only does this game test your linguistic agility, but it also reminds us that it's okay to have a laugh, even at our own expense. So dive in, enjoy the play on words, and remember: it's all in good fun!</p>
-      <button class="button" id="reveal-audio-btn">Too lazy to read?</button>
-      <audio controls id="audio-control" style="display:none;">
+      <button class="button reveal-btn" id="reveal-intro-btn">Too lazy to read?</button>
+      <audio controls class="audio" id="audio-control-intro" style="display:none;">
         <source src="assets/media/intro.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
     </section>
     <section class="outer-segment" id="game-rules">
-      <h2>Game rules and how to play</h2>
-      <ul>
-        <li>How to play</li>
-        <li>What to expect</li>
-        <li>General rules</li>
-      </ul>
+      <h2>Rules</h2>
+      <h3>The gist of the game: How to conquer the quirks!
+      </h3><br>
+      <p>
+        Ventured into the vast vocabulary vortex yet? Here's how to navigate! Kick things off by tapping the "Start Quiz" button right beneath this section. Before you will unfurl a topsy-turvy term or phrase, accompanied by four potential rectifications – buttons that beg your attention. But remember, amongst the four, only one holds the key to correctness.
+      </p><br>
+      <p>
+        Click on what you believe is the rightful rectification. Get it right, and your score of stellar selections will soar. Slip up? Well, your tally of tiny tumbles will take the lead, beckoning another bash at the befuddling phrase. Feeling frazzled? There's a hint waiting in the wings, eager to give you a nudge in the right direction.
+      </p><br>
+      <p>
+        So, word warrior, are you ready to wrestle with the quirks and quips of our language? Dive deep, decipher diligently, and above all, delight in the discourse!
+      </p>
+      <button class="button reveal-btn" id="reveal-howto-btn">Rather listen to the how to?</button>
+      <audio controls class="audio" id="audio-control-howto" style="display:none;">
+        <source src="assets/media/howto.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <h3>The wordsmith's wisdom: Rules to revel by!
+      </h3><br>
+      <ol>
+        <li><strong>Gentleman's / Gentlewoman's Agreement: </strong>While the vast vaults of Google beckon with their bounteous knowledge, resist the urge! The thrill lies in wrestling with your own wit and whimsy.</li>
+        <br><li><strong>For the Code Connoisseurs: </strong>To our developer dynamos and inspect-element enthusiasts – we tip our hats to your technical tenacity! But for this quirky quest, keep the tools tucked away and let the linguistic challenges unfold organically.</li>
+        <br><li><strong>The Cardinal Code of Conduct: </strong>Above all, amidst the twists and turns, the stumbles and strides, there's one golden rule – Revel in the ride and relish the riotous fun!</li>
+      </ol>
+      <button class="button reveal-btn" id="reveal-rules-btn">Read out the rules!</button>
+      <audio controls class="audio" id="audio-control-rules" style="display:none;">
+        <source src="assets/media/rules.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
     </section>
     <main class="outer-segment" id="game-quiz">
       <h2>
@@ -52,13 +75,16 @@
         </div>
       </section>
       <section class="game-details">
-        <h3>Twisted phrase:</h3>
+        <button class="button" id="reveal-game-btn">Start Quiz?</button>
+        <div id="game" style="display:none;">
+          <h3>Twisted phrase:</h3>
         <p id="display-question">The first question...</p>
         <div id="answer-button-container">
           <button class="button answer-button" id="answer1">Answer #1</button>
           <button class="button answer-button" id="answer2">Answer #2</button>
           <button class="button answer-button" id="answer3">Answer #3</button>
           <button class="button answer-button" id="answer4">Answer #4</button>
+        </div>
         </div>
       </section>
       <section class="game-details" id="game-hint">

@@ -142,11 +142,14 @@ class QuizApp {
 };
 
 /**
- *Toggle the display of the audio controls
+ * Reveals the audio controls after clicking the linked button.
+ * 
+ * @param {String} buttonId - The clicked button
+ * @param {String} audioControlId - The audio control to reveal
  */
-function revealAudioBtn(){
-    document.getElementById('reveal-audio-btn').addEventListener('click', function(event) {
-        var audioControl = document.getElementById('audio-control');
+function revealAudioBtn(buttonId, audioControlId){
+    document.getElementById(buttonId).addEventListener('click', function(event) {
+        var audioControl = document.getElementById(audioControlId);
         var buttonControl = event.target;
         if (audioControl.style.display === "none") {
             audioControl.style.display = "block";
@@ -157,8 +160,21 @@ function revealAudioBtn(){
     });
 }
 
+/**
+*Reveal the display of the quiz
+*/
+ function revealGame(){
+    document.getElementById('reveal-game-btn').addEventListener('click', function(event) {
+        document.getElementById('game').style.display = "block";
+        event.target.style.display = "none";
+        let app = new QuizApp();
+        app.init();
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    revealAudioBtn();
-    let app = new QuizApp();
-    app.init();
+    revealAudioBtn('reveal-intro-btn','audio-control-intro');
+    revealAudioBtn('reveal-howto-btn','audio-control-howto');
+    revealAudioBtn('reveal-rules-btn','audio-control-rules');
+    revealGame();
 });

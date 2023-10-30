@@ -126,18 +126,18 @@
         "source": "Leo Tolstoy ('Anna Karenina')"
     },
     {
-        "altered_phrase": "Man is born free, and everywhere he is in chains of code.",
-        "original_phrase": "Man is born free, and everywhere he is in chains.",
-        "changed_word": "chains of code",
-        "original_word": "chains",
+        "altered_phrase": "If you want something done right, do it recursively.",
+        "original_phrase": "If you want something done right, do it yourself.",
+        "changed_word": "recursively",
+        "original_word": "yourself",
         "wrong_options": [
-            "loops",
-            "algorithms",
-            "databases",
-            "servers",
-            "scripts"
+            "the other way around",
+            "right",
+            "in the cloud",
+            "test driven",
+            "agile"
         ],
-        "source": "Jean-Jacques Rousseau ('The Social Contract')"
+        "source": "Charles-Guillaume Étienne"
     },
     {
         "altered_phrase": "The quick brown fox jumps over the lazy debugger.",
