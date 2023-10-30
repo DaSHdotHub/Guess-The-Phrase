@@ -145,10 +145,9 @@ class QuizApp {
  *Toggle the display of the audio controls
  */
 function revealAudioBtn(){
-    document.getElementById('revealAudioBtn').addEventListener('click', function() {
-        var audioControl = document.getElementById('audioControl');
-        var buttonControl = document.getElementById('revealAudioBtn');
-        
+    document.getElementById('reveal-audio-btn').addEventListener('click', function(event) {
+        var audioControl = document.getElementById('audio-control');
+        var buttonControl = event.target;
         if (audioControl.style.display === "none") {
             audioControl.style.display = "block";
             buttonControl.style.display = "none";

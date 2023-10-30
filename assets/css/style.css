@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@200;300;400;500&family=Ysabeau+Infant:wght@200:300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;500&family=Ysabeau+Infant:wght@500;600&display=swap');
 
 /* CSS Variables */
 :root {
@@ -53,7 +53,7 @@ h2 {
     margin-bottom: 20px;
 } 
 
-h3, p {
+h3, p , button, section > div {
     font-family: 'Roboto Flex', sans-serif;
     font-weight: 400;
 }
@@ -118,7 +118,7 @@ main:hover {
     text-align: justify;
 }
 
-#revealAudioBtn {
+#reveal-audio-btn {
     padding: 10px 15px;
     margin: 10px;
     background-color: var(--main-bg-color);
@@ -129,9 +129,13 @@ main:hover {
     transition: background-color 0.3s ease;
 }
 
-#revealAudioBtn:hover {
+#reveal-audio-btn:hover {
     background-color: #0077ff;
     letter-spacing: 1.3px;
+}
+
+#audio-control{
+    margin: 10px;
 }
 
 #game-rules {
