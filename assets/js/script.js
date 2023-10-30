@@ -125,7 +125,7 @@ class QuizApp {
         let oldScore = parseInt(element.innerText);
         element.innerText = oldScore + 1;
     }
-    
+
     /**
      * Pulses either the correct or incorrect score for visual feedback.
      * 
@@ -134,7 +134,7 @@ class QuizApp {
     flashScore(type) {
         let element = document.getElementById(type);
         let pulse;
-        if (type === 'correct') {
+        if (type === 'correct-score') {
             pulse = 'greenPulse';
         } else {
             pulse = 'redPulse';

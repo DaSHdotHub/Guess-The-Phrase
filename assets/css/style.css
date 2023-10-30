@@ -156,6 +156,7 @@ main {
     text-align: right;
 }
 
+/*Styling for rules section*/
 #game-rules{
     text-align: justify;
 }
@@ -165,7 +166,14 @@ main {
     text-align: center;
 }
 
-/*Styling for the displayed "twsted" phrase*/
+/*Score results styling*/ 
+.scores {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*Styling for the displayed "twisted phrase"*/
 #display-question {
     padding: 10px;
     font-size: 17px;
@@ -326,7 +334,7 @@ footer>div {
     }
 
     #game-results {
-        margin-left: 66%;
+        margin-left: 60%;
         text-align: left;
     }
 
