@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;500&family=Ysabeau+Infant:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@500;600;700;800&family=Ysabeau+Infant:wght@500;600&display=swap');
 
 /* CSS Variables */
 :root {
@@ -49,7 +49,7 @@ h2 {
     font-family: var(--font-for-header-footer);
     font-weight: 500;
     text-transform: uppercase;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: var(--main-bg-color) 1px 0 10px;
     margin-bottom: 20px;
 } 
 
@@ -58,6 +58,11 @@ h3, p , button, section > div {
     font-weight: 400;
 }
 
+h3 {
+    font-weight: 800;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
 
 #menu {
     display: flex;
@@ -99,7 +104,7 @@ main {
 
 main {
     background-image: url("../img/thinker.webp");
-    background-position-y: 50px;
+    background-position-y: 70px;
     background-repeat: no-repeat;
     background-size:contain;
 }
@@ -118,22 +123,6 @@ main:hover {
     text-align: justify;
 }
 
-#reveal-audio-btn {
-    padding: 10px 15px;
-    margin: 10px;
-    background-color: var(--main-bg-color);
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-#reveal-audio-btn:hover {
-    background-color: #0077ff;
-    letter-spacing: 1.3px;
-}
-
 #audio-control{
     margin: 10px;
 }
@@ -147,7 +136,8 @@ main:hover {
 }
 
 #display-question {
-    padding: 20px;
+    padding: 10px;
+    text-shadow: rgba(255, 179, 0, 0.701) 1px 0 10px;
 }
 
 /* Flexbox Container for Buttons */
@@ -159,12 +149,12 @@ main:hover {
 }
 
 /* Button Styling */
-.answer-button {
-    background-color: var(--main-bg-color);
-    color: white;
-    font-weight: 500;
+.button {
+    /*background-color: var(--main-bg-color);*/
+    color: black;
+    font-weight: 600;
     padding: 12px 20px;
-    border: none;
+    border: solid var(--main-bg-color);
     border-radius: 5px;
     cursor: pointer;
     flex: 1;
@@ -172,13 +162,14 @@ main:hover {
     text-align: center;
     transition: background-color 0.3s ease;
 }
+
 /* Slightly darker shade on hover */
-.answer-button:hover {
+.button:hover{
+    color: white;
     background-color: #0077ff;
     letter-spacing: 1.3px;
 
 }
-
 
 footer {
     height: fit-content;
@@ -239,10 +230,19 @@ footer>div {
     #answer-button-container {
         flex-direction: column;
     }
+
+    .answer-button {
+        width: 66%;
+    }
 }
 /* Desktop design */
 @media only screen and (min-width: 769px) {     
     
+    main > h2 {
+        display:flex;
+        justify-content: center;
+    }
+
     #game-results {
         margin-left: 66%;
         text-align: left;

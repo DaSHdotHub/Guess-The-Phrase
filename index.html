@@ -26,7 +26,7 @@
       <br><h3>A Twist on Words: The Fun Phrases Quiz!</h3>
       <br><p>Ever found yourself chuckling at a phrase that's just... off? Whether it's a word out of place or a hilariously incorrect term, sometimes our language can take an unexpected and humorous turn. This quiz game dives right into this whimsical world of words, challenging you to spot the odd one out and correct the quirky phrases.</p>
       <br><p>In a world where 'IT' often demands seriousness, why not take a light-hearted break? Not only does this game test your linguistic agility, but it also reminds us that it's okay to have a laugh, even at our own expense. So dive in, enjoy the play on words, and remember: it's all in good fun!</p>
-      <button id="reveal-audio-btn">Too lazy to read?</button>
+      <button class="button" id="reveal-audio-btn">Too lazy to read?</button>
       <audio controls id="audio-control" style="display:none;">
         <source src="assets/media/intro.m4a" type="audio/mpeg">
         Your browser does not support the audio element.
@@ -55,10 +55,10 @@
         <h3>Display altered phrase:</h3>
         <p id="display-question">The first question...</p>
         <div id="answer-button-container">
-          <button class="answer-button" id="answer1">Answer #1</button>
-          <button class="answer-button" id="answer2">Answer #2</button>
-          <button class="answer-button" id="answer3">Answer #3</button>
-          <button class="answer-button" id="answer4">Answer #4</button>
+          <button class="button answer-button" id="answer1">Answer #1</button>
+          <button class="button answer-button" id="answer2">Answer #2</button>
+          <button class="button answer-button" id="answer3">Answer #3</button>
+          <button class="button answer-button" id="answer4">Answer #4</button>
         </div>
       </section>
       <section class="game-details" id="game-hint">
@@ -66,8 +66,8 @@
           <h3>Display Hint:</h3>
           <p>
             The phrase has something to do with:
-            <span id="display-hint"> hint... </span>
           </p>
+          <span id="display-hint"> hint... </span>
         </div>
       </section>
     </main>
