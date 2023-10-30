@@ -1,6 +1,7 @@
+/* Importing external fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@500;600;700;800&family=Ysabeau+Infant:wght@500;600&display=swap');
 
-/* CSS Variables */
+/* Setting global variables */
 :root {
     --main-bg-color: #00c3ff;
     --header-text-color: #303030;
@@ -9,7 +10,7 @@
     --font-for-content: 'Roboto Flex', sans-serif;
 }
 
-/* General styling */
+/* Resetting default styles */
 * {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -18,12 +19,13 @@
     box-sizing: border-box;
 }
 
-/* Creates the background gradient*/
+/* Background gradient for entire body */
 body {
     height: 100vh;
     background-image: linear-gradient(180deg, white, var(--main-bg-color), white);
 }
 
+/* Styling for <header> element */
 header {
     height: fit-content;
     color: var(--header-text-color);
@@ -36,6 +38,7 @@ header {
     margin: 20px auto;
 }
 
+/* Styling for main title */
 h1 {
     font-family: var(--font-for-header-footer);
     letter-spacing: 1.5px;
@@ -45,6 +48,7 @@ h1 {
     margin-bottom: 20px;
 }
 
+/* Styling for section titles */
 h2 {
     font-family: var(--font-for-header-footer);
     font-weight: 500;
@@ -53,20 +57,23 @@ h2 {
     margin-bottom: 20px;
 }
 
-h3,
-p,
-button,
-section>div {
-    font-family: 'Roboto Flex', sans-serif;
-    font-weight: 400;
-}
-
+/*Styling for content headings*/
 h3 {
+    font-family: var(--font-for-content);
     font-weight: 800;
     text-transform: uppercase;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
 }
 
+/*Styling for content*/
+p,
+button,
+section>div {
+    font-family: var(--font-for-content);
+    font-weight: 400;
+}
+
+/*navbar outer style*/
 #menu {
     display: flex;
     flex-direction: row;
@@ -79,6 +86,7 @@ h3 {
 
 }
 
+/*navbar inner style*/
 #menu a {
     font-weight: 400;
     color: var(--footer-text-color);
@@ -89,11 +97,13 @@ h3 {
 
 }
 
+/*navbar inner style on hover*/
 #menu a:hover {
     transform: scale(1.5);
     transition: transform 0.3s ease;
 }
 
+/*background style for sections*/
 section,
 main {
     padding: 20px;
@@ -105,6 +115,13 @@ main {
     transition: box-shadow 0.3s ease;
 }
 
+/*background style for sections on hover*/
+section:hover,
+main:hover {
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/*additional background style for main*/
 main {
     background-image: url("../img/thinker.webp");
     background-position-y: 70px;
@@ -112,32 +129,38 @@ main {
     background-size: contain;
 }
 
+/*general style for inner sections of main*/
 .game-details {
     background-color: #fffffff1;
     margin: 0 0 20px 0;
 }
 
-section:hover,
-main:hover {
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
-}
-
+/*Block text for introduction*/
 #introduction {
     text-align: justify;
 }
 
-#audio-control {
-    margin: 10px;
+/*make space for spedific button*/
+#reveal-audio-btn {
+    margin: 20px 0px;
 }
 
+/*make space for audio control*/
+#audio-control {
+    margin: 20px 0px;
+}
+
+/*Styling for rules section*/
 #game-rules {
     text-align: right;
 }
 
+/*Styling for quiz section*/
 #game-quiz {
     text-align: center;
 }
 
+/*Styling for the displayed "twsted" phrase*/
 #display-question {
     padding: 10px;
     text-shadow: rgba(255, 179, 0, 0.701) 1px 0 10px;
@@ -173,12 +196,14 @@ main:hover {
     letter-spacing: 1.3px;
 }
 
+/*Outer footer styling*/
 footer {
     height: fit-content;
     width: 100%;
     color: var(--footer-text-color);
 }
 
+/*Inner footer styling*/
 footer>div {
     font-family: var(--font-for-header-footer);
     text-align: center;
