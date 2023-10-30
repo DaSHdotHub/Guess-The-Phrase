@@ -105,12 +105,12 @@ class QuizApp {
         if (event.target.classList.contains('answer-button')) {
             const index = parseInt(event.target.id.toString().slice(-1)) - 1;
             if (this.displayOptions[index].displayCorrect) {
-                alert("Genius! That was correct.");
                 this.incrementScore('correct');
+                this.flashScore('correct-score');
                 this.displayNextQuestion();
             } else {
-                alert("Try again");
                 this.incrementScore('incorrect');
+                this.flashScore('incorrect-score');
             }
         };
     }
@@ -121,9 +121,29 @@ class QuizApp {
     * @param {string} type - Type of score to increment ('correct' or 'incorrect').
     */
     incrementScore(type) {
-        const element = document.getElementById(type);
-        const oldScore = parseInt(element.innerText);
+        let element = document.getElementById(type);
+        let oldScore = parseInt(element.innerText);
         element.innerText = oldScore + 1;
+    }
+    
+    /**
+     * Pulses either the correct or incorrect score for visual feedback.
+     * 
+     * @param {string} type - Type of score to pulse green or red.
+     */
+    flashScore(type) {
+        let element = document.getElementById(type);
+        let pulse;
+        if (type === 'correct') {
+            pulse = 'greenPulse';
+        } else {
+            pulse = 'redPulse';
+        }
+        console.log(element.classList.add(pulse));
+        element.classList.add(pulse);
+        setTimeout(function() {
+            element.classList.remove(pulse);
+        }, 600);
     }
 
     /**
@@ -134,7 +154,7 @@ class QuizApp {
     */
     fisherYatesShuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
+            let j = Math.floor(Math.random() * (i + 1));
             [array[i], array[j]] = [array[j], array[i]];
         }
         return array;

@@ -168,6 +168,7 @@ main {
 /*Styling for the displayed "twsted" phrase*/
 #display-question {
     padding: 10px;
+    font-size: 17px;
     text-shadow: rgba(255, 179, 0, 0.701) 1px 0 10px;
 }
 
@@ -184,6 +185,7 @@ main {
     background-color: white;
     color: black;
     font-weight: 600;
+    font-size: 15px;
     padding: 12px 20px;
     border: solid var(--main-bg-color);
     border-radius: 5px;
@@ -240,6 +242,42 @@ footer>div {
 /* Hover state - Icon enlarged */
 .icon:hover {
     transform: scale(1.5);
+}
+
+/* Red pulse procedure*/
+@keyframes redPulse {
+    0% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: lightcoral;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+/* Red pulse animation (.1 s = 100 ms) */
+.redPulse {
+    animation: redPulse 0.6s;
+}
+
+/* Green pulse procedure*/
+@keyframes greenPulse {
+    0% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: lightgreen;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+/* Green pulse animation (.1 s = 100 ms) */
+.greenPulse {
+    animation: greenPulse 0.6s;
 }
 
 /* Responsive Design */
