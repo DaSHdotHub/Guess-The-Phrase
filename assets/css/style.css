@@ -3,8 +3,8 @@
 /* CSS Variables */
 :root {
     --main-bg-color: #00c3ff;
-    --header-text-color: #000000;
-    --footer-text-color: #111111;
+    --header-text-color: #303030;
+    --footer-text-color: #303030;
     --font-for-header-footer: 'Ysabeau Infant', sans-serif;
     --font-for-content: 'Roboto Flex', sans-serif;
 }
@@ -49,11 +49,14 @@ h2 {
     font-family: var(--font-for-header-footer);
     font-weight: 500;
     text-transform: uppercase;
-    text-shadow: var(--main-bg-color) 1px 0 10px;
+    text-shadow: var(--main-bg-color) 1px 0 2px;
     margin-bottom: 20px;
-} 
+}
 
-h3, p , button, section > div {
+h3,
+p,
+button,
+section>div {
     font-family: 'Roboto Flex', sans-serif;
     font-weight: 400;
 }
@@ -106,7 +109,7 @@ main {
     background-image: url("../img/thinker.webp");
     background-position-y: 70px;
     background-repeat: no-repeat;
-    background-size:contain;
+    background-size: contain;
 }
 
 .game-details {
@@ -123,7 +126,7 @@ main:hover {
     text-align: justify;
 }
 
-#audio-control{
+#audio-control {
     margin: 10px;
 }
 
@@ -150,7 +153,7 @@ main:hover {
 
 /* Button Styling */
 .button {
-    /*background-color: var(--main-bg-color);*/
+    background-color: white;
     color: black;
     font-weight: 600;
     padding: 12px 20px;
@@ -164,11 +167,10 @@ main:hover {
 }
 
 /* Slightly darker shade on hover */
-.button:hover{
+.button:hover {
     color: white;
     background-color: #0077ff;
     letter-spacing: 1.3px;
-
 }
 
 footer {
@@ -199,24 +201,37 @@ footer>div {
 }
 
 /* Regular state - Icon size */
-.icon{
+.icon {
     color: var(--footer-text-color);
     transition: transform 0.3s ease;
     margin: 10px;
 }
 
 /* Hover state - Icon enlarged */
-.icon:hover{
+.icon:hover {
     transform: scale(1.5);
 }
 
 /* Responsive Design */
-/*Ensures the margin changes smoothly from 10px to auto*/
-@media only screen and (min-width: 620px) {     
-    .outer-segment {
-        margin: 20px auto; 
+/* Disables hover feature on touch devices */
+@media (hover: none) {
+    .button:hover {
+        background-color: var(--main-bg-color);
+        /* Reset to default background color */
+        letter-spacing: normal;
+        /* Reset letter spacing */
+        transform: none;
+        /* Remove any transformations if there are any */
     }
 }
+
+/*Ensures the margin changes smoothly from 10px to auto*/
+@media only screen and (min-width: 620px) {
+    .outer-segment {
+        margin: 20px auto;
+    }
+}
+
 /*Ensures the nav-bar stays visible and is not cut off*/
 @media only screen and (max-width: 374px) {
     #menu {
@@ -226,7 +241,7 @@ footer>div {
 }
 
 /* Mobile design */
-@media only screen and (max-width: 768px) {     
+@media only screen and (max-width: 768px) {
     #answer-button-container {
         flex-direction: column;
     }
@@ -235,11 +250,12 @@ footer>div {
         width: 66%;
     }
 }
+
 /* Desktop design */
-@media only screen and (min-width: 769px) {     
-    
-    main > h2 {
-        display:flex;
+@media only screen and (min-width: 769px) {
+
+    main>h2 {
+        display: flex;
         justify-content: center;
     }
 
@@ -247,6 +263,7 @@ footer>div {
         margin-left: 66%;
         text-align: left;
     }
+
     #answer-button-container {
         flex-direction: row;
         justify-content: space-evenly;
