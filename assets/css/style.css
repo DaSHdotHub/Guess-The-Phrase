@@ -152,12 +152,12 @@ main {
 }
 
 /*Styling for h3 header above the rules section*/
-#game-rules > h2{
+#game-rules>h2 {
     text-align: right;
 }
 
 /*Styling for rules section*/
-#game-rules{
+#game-rules {
     text-align: justify;
 }
 
@@ -166,9 +166,9 @@ main {
     text-align: center;
 }
 
-/*Score results styling*/ 
+/*Score results styling*/
 .scores {
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -257,9 +257,11 @@ footer>div {
     0% {
         background-color: transparent;
     }
+
     50% {
         background-color: lightcoral;
     }
+
     100% {
         background-color: transparent;
     }
@@ -275,9 +277,11 @@ footer>div {
     0% {
         background-color: transparent;
     }
+
     50% {
         background-color: lightgreen;
     }
+
     100% {
         background-color: transparent;
     }

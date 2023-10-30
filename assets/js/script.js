@@ -52,7 +52,7 @@ class QuizApp {
         } while (this.alreadyQuestioned.includes(this.randomQuestionNumber));
         this.alreadyQuestioned.push(this.randomQuestionNumber);
         if (this.alreadyQuestioned.length === this.data.length) {
-           this.gameFinished();
+            this.gameFinished();
         }
 
         let questionObject = this.data[this.randomQuestionNumber];
@@ -141,7 +141,7 @@ class QuizApp {
         }
         console.log(element.classList.add(pulse));
         element.classList.add(pulse);
-        setTimeout(function() {
+        setTimeout(function () {
             element.classList.remove(pulse);
         }, 600);
     }
@@ -163,11 +163,11 @@ class QuizApp {
     /**
      * On finish alert the user, reset the alreadyQuestioned Array, reset the game-section of the DOM.
      */
-    gameFinished(){
+    gameFinished() {
         this.alreadyQuestioned = [];
         alert("Congratulation! You've corrected all phrases in this game. Press ok if you want to play again.");
         document.getElementById('game').style.display = "none";
-        document.getElementById('reveal-game-btn').style.display = 'block'
+        document.getElementById('reveal-game-btn').style.display = 'block';
     }
 };
 
@@ -177,8 +177,8 @@ class QuizApp {
  * @param {String} buttonId - The clicked button
  * @param {String} audioControlId - The audio control to reveal
  */
-function revealAudioBtn(buttonId, audioControlId){
-    document.getElementById(buttonId).addEventListener('click', function(event) {
+function revealAudioBtn(buttonId, audioControlId) {
+    document.getElementById(buttonId).addEventListener('click', function (event) {
         var audioControl = document.getElementById(audioControlId);
         var buttonControl = event.target;
         if (audioControl.style.display === "none") {
@@ -193,8 +193,8 @@ function revealAudioBtn(buttonId, audioControlId){
 /**
 *Reveal the display of the quiz
 */
- function revealGame(){
-    document.getElementById('reveal-game-btn').addEventListener('click', function(event) {
+function revealGame() {
+    document.getElementById('reveal-game-btn').addEventListener('click', function (event) {
         document.getElementById('game').style.display = "block";
         event.target.style.display = "none";
         let app = new QuizApp();
@@ -205,9 +205,9 @@ function revealAudioBtn(buttonId, audioControlId){
 /**
 *Toggle the display of the hint of the quiz
 */
-function revealHint(){
-    document.getElementById('reveal-game-hint').addEventListener('click', function(event) {
-        if (document.getElementById('game-hint').style.display === 'none'){
+function revealHint() {
+    document.getElementById('reveal-game-hint').addEventListener('click', function (event) {
+        if (document.getElementById('game-hint').style.display === 'none') {
             document.getElementById('game-hint').style.display = 'block';
             document.getElementById('game-hint-header').style.display = 'none';
         } else {
@@ -218,9 +218,9 @@ function revealHint(){
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    revealAudioBtn('reveal-intro-btn','audio-control-intro');
-    revealAudioBtn('reveal-howto-btn','audio-control-howto');
-    revealAudioBtn('reveal-rules-btn','audio-control-rules');
+    revealAudioBtn('reveal-intro-btn', 'audio-control-intro');
+    revealAudioBtn('reveal-howto-btn', 'audio-control-howto');
+    revealAudioBtn('reveal-rules-btn', 'audio-control-rules');
     revealGame();
     revealHint();
 });
