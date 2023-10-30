@@ -112,7 +112,7 @@ class QuizApp {
                 this.incrementScore('incorrect-score');
                 this.flashScore('incorrect');
             }
-        };
+        }
     }
 
     /**
@@ -169,7 +169,7 @@ class QuizApp {
         document.getElementById('game').style.display = "none";
         document.getElementById('reveal-game-btn').style.display = 'block';
     }
-};
+}
 
 /**
  * Reveals the audio controls after clicking the linked button.
