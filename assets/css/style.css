@@ -213,15 +213,12 @@ footer>div {
 }
 
 /* Responsive Design */
-/* Disables hover feature on touch devices */
+/* Disables hover feature on touch devices for the button class */
 @media (hover: none) {
     .button:hover {
-        background-color: var(--main-bg-color);
-        /* Reset to default background color */
+        background-color: white;
         letter-spacing: normal;
-        /* Reset letter spacing */
         transform: none;
-        /* Remove any transformations if there are any */
     }
 }
 
