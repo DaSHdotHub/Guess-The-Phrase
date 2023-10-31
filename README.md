@@ -1,16 +1,14 @@
-# Marvelous Matching
+# Guess the Phrase
 ## Overview
 
-QuizGame - brief description
+Guess the Phrase - brief description
 
 TODO: ADD MOCKUP?
 
-# Title
-Your main title content here.
-
 ## Table of Contents
 
-- [Title](#title)
+- [Guess the Phrase](#guess-the-phrase)
+- [Overview](#overview)
 - [Intro](#intro)
 - [Features](#features)
   - [Header](#header)
@@ -18,6 +16,15 @@ Your main title content here.
   - [Footer](#footer)
   - [Future Features](#future-features)
 - [Manual Testing](#manual-testing)
+  - [Features Testing](#features-testing)
+  - [Lighthouse Performance](#lighthouse-performance)
+  - [Validator Testing](#validator-testing)
+    - [HTML - W3C - Markup Validation Service](#html---w3c---markup-validation-service)
+    - [CSS - W3C - CSS Validation Service](#css---w3c---css-validation-service)
+    - [JS Validation](#js-validation)
+  - [Browser Compatibility](#browser-compatibility)
+  - [Screen size responsiveness](#screen-size-responsiveness)
+  - [Bugs resolved and unresolved](#bugs-resolved-and-unresolved)
 - [Credits](#credits)
   - [Software](#software)
   - [Hardware](#hardware)
