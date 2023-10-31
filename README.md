@@ -42,40 +42,7 @@ Below are some features the site currently has to offer and also some features w
     
     I tested the responsivness of the application during the development phase using using the following:
 
-    * Promethean Activboard Interactive Whiteboard. (Firefox for Android)
-    <img src="./readme_images/promethean1.png">
-
-    * HP Pavillion Notebook x360 serving a
-    Smart Technologies SB-480 Interactive Whiteboard.
-
-    * Mac Pro with a 21" Apple Cinema display -- Safari, Chrome and Firefox
-
     * Macbook pro 13" -- Safari, Chrome and Firefox
-
-    * Toshiba Satellite Pro Laptop 15" (Windows 10) -- Edge, Chrome and Firefox
-
-    * Apple iPad Mini (5th gen) -- Safari and Chrome
-    <img src="./readme_images/ipad_mini.png">
-
-    * Apple iPad (2nd gen -- Safari)
-    <img src="./readme_images/old_ipad.png">
-
-    * Huawei P20 Pro Android Phone -- Chrome and Firefox.
-
-    * Various android tablet devices.
-    <img src="./readme_images/android_tablet.png">
-
-    I also used Google Dev-tools to test the sites responsivness by emulating the apps appearance across other device screen sizes.
-
-    <img src="./readme_images/dev_tools.png">
-
-    At the time of testing, the site was fully responsive across Chrome, Firefox and Safari browsers on all of the above devices with the exeption of the following:
-
-    * The Promethean Activboard would not display box items correctly in the Chromium web browser.
-
-    * The site would not load box images or display correctly on the older iPad2 running ios 9.
-
-    * The site is not practically useable on mobile devices in landscape mode.
 
     <br>
 
