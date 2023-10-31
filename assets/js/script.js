@@ -4,6 +4,8 @@ class QuizApp {
         this.randomQuestionNumber = null;
         this.displayOptions = [];
         this.alreadyQuestioned = [];
+        //bind future event listeners to instance variable
+        this.boundCheckAnswer = this.checkAnswer.bind(this);
     }
 
     /**
@@ -14,23 +16,17 @@ class QuizApp {
         document.getElementById('correct-score').innerText = 0;
         document.getElementById('incorrect-score').innerText = 0;
         this.displayNextQuestion();
-        document.getElementById('answer-button-container').addEventListener("click", (event) => {
-            this.checkAnswer(event);
-        });
+        document.getElementById('answer-button-container').addEventListener("click", this.boundCheckAnswer);
     }
 
     /**
-    * Loads the phrases from a JSON datafile.
+    * Loads the phrases from a JSON datafile with async await.
     */
     async loadPhrases() {
         try {
-            //await fetch returns a promise in form of an http object which is rather a representation of the JSON, it does not contain it actually.
             let response = await fetch('assets/data/phrases.json');
-            //awair response returns a second promise, resolving the result of parsing the response body text as JSON.
             this.data = await response.json();
-            //CallBack function that runs when data is loaded
             this.onPhrasesLoaded();
-            //catch error when something went wrong fetching the JSON file
         } catch (error) {
             console.error("There was an error fetching the JSON file", error);
         }
@@ -214,6 +210,8 @@ class QuizApp {
         alert("Congratulation! You've corrected all phrases in this game. Press ok if you want to play again.");
         document.getElementById('game').style.display = "none";
         document.getElementById('reveal-game-btn').style.display = 'flex';
+        document.getElementById('answer-button-container').removeEventListener("click", this.boundCheckAnswer);
+
     }
 }
 
