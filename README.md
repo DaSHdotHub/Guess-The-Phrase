@@ -5,90 +5,82 @@ QuizGame - brief description
 
 TODO: ADD MOCKUP?
 
-## Contents
-[Planning & Development](https://github.com/dashdothub/QuizGame#planning--development)
+# Title
+Your main title content here.
 
-[Features](https://github.com/dashdothub/QuizGame#features)
+## Table of Contents
 
-[Testing](https://github.com/dashdothub/QuizGame#testing)
+- [Title](#title)
+- [Intro](#intro)
+- [Features](#features)
+  - [Header](#header)
+  - [Main](#main)
+  - [Footer](#footer)
+  - [Future Features](#future-features)
+- [Manual Testing](#manual-testing)
+  - [HTML - W3C - Markup Validation Service](#html---w3c---markup-validation-service)
+  - [CSS - W3C - CSS Validation Service](#css---w3c---css-validation-service)
+- [Credits](#credits)
+  - [Software](#software)
+  - [Hardware](#hardware)
+  - [Inspirations](#inspirations)
 
-[Deployment](https://github.com/dashdothub/QuizGame#deployment)
+## Intro
 
-[Languages](https://github.com/dashdothub/QuizGame#languages)
+Introductory content goes here.
 
-[Software](https://github.com/dashdothub/QuizGame#software)
+## Features
 
-[Media](https://github.com/dashdothub/QuizGame#media)
+General feature content here.
 
-[Credits](https://github.com/dashdothub/QuizGame#credits)
+### Header
 
-## Planning & Development
+Header-specific content here.
 
-- 
+### Main
 
+Main content-specific details here.
 
-# Features #
+### Footer
 
-Below are some features the site currently has to offer and also some features which may be added in future.
+Footer-specific content here.
 
-## Existing Features ##
+### Future Features
 
-# Testing
+Future features content here.
 
-- __Testing During Development__
- 
-* Responsiveness testing 
+## Manual Testing
 
-    
-    I tested the responsivness of the application during the development phase using using the following:
+Introduction or overview of your manual testing.
 
-    * Macbook pro 13" -- Safari, Chrome and Firefox
+### Validator Testing
 
-    <br>
+Introduction to validator testing.
 
+#### HTML - W3C - Markup Validation Service
 
-# Deployment
+Details and results of your HTML validation testing here.
 
-* The site was deployed to GitHub pages. The steps to deploy are as follows:
-    * From this project's repository, navigate to the settings tab
-    * From the left hand menu, select pages.
-    * From the source section drop-down menu, select the Main Branch and click save.
-    * Once the main branch has been selected, the page will refresh and provide a link to the live project. 
+#### CSS - W3C - CSS Validation Service
 
-The live link can be found here - https://dashdothub.github.io/QuizGame/index.html
+Details and results of your CSS validation testing here.
 
-   
-# Languages
+#### JS Validation
 
-* The coding languages used to create this site are HTML, CSS and JavaScript.
+Details and results of your CSS validation testing here.
 
-    <br>
+## Credits
 
-# Software
+General credit acknowledgements.
 
-* Git to create, load and push my code to Github.
+### Software
 
-* Git, (Gitand Github) as my version control system for the site.
-    
-* Visual Studio Code with installed extensions for
+Software credits go here.
 
-* CodeAnywhere
+### Hardware
 
-* VB Cable:
+Hardware credits go here.
 
-# Media
+### Inspirations
 
-* The audio was artificially generated in three steps.
-
-
-# Credits
-
-- __Content__
-
-    * All text icons used on the site were sourced from: https://fontawesome.com/search?m=freecom
-
-    * The link to the favicon icon on all four pages is from: https://favicon.io/
-
-<br>
-
-- __Thanks__
+List or details of inspirations go here.
