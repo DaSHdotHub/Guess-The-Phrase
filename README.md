@@ -18,12 +18,11 @@ Your main title content here.
   - [Footer](#footer)
   - [Future Features](#future-features)
 - [Manual Testing](#manual-testing)
-  - [HTML - W3C - Markup Validation Service](#html---w3c---markup-validation-service)
-  - [CSS - W3C - CSS Validation Service](#css---w3c---css-validation-service)
 - [Credits](#credits)
   - [Software](#software)
   - [Hardware](#hardware)
   - [Inspirations](#inspirations)
+  - [Resources](#resources)
 
 ## Intro
 
@@ -53,6 +52,14 @@ Future features content here.
 
 Introduction or overview of your manual testing.
 
+### Features Testing
+
+How to Features were tested
+
+### Lighthouse Performance
+
+Lighthouse Performance from DevTools
+
 ### Validator Testing
 
 Introduction to validator testing.
@@ -69,6 +76,18 @@ Details and results of your CSS validation testing here.
 
 Details and results of your CSS validation testing here.
 
+### Browser Compatibility
+
+Checked different browsers?
+
+### Screen size responsiveness
+
+Responsiveness
+
+### Bugs resolved and unresolved
+
+Unresolved Bugs: none
+
 ## Credits
 
 General credit acknowledgements.
@@ -84,3 +103,7 @@ Hardware credits go here.
 ### Inspirations
 
 List or details of inspirations go here.
+
+### Resources
+
+List or resources used in this project.
