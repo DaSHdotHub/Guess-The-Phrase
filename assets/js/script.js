@@ -132,7 +132,7 @@ class QuizApp {
         document.getElementById("display-question-header").textContent = "Correct Phrase";
         document.getElementById("display-question").textContent = this.data[this.randomQuestionNumber].original_phrase;
 
-        this.flashElement('display-question-header');
+        this.flashElement('display-question');
 
 
         
@@ -213,7 +213,7 @@ class QuizApp {
         this.alreadyQuestioned = [];
         alert("Congratulation! You've corrected all phrases in this game. Press ok if you want to play again.");
         document.getElementById('game').style.display = "none";
-        document.getElementById('reveal-game-btn').style.display = 'block';
+        document.getElementById('reveal-game-btn').style.display = 'flex';
     }
 }
 
