@@ -139,7 +139,6 @@ class QuizApp {
         } else {
             pulse = 'redPulse';
         }
-        console.log(element.classList.add(pulse));
         element.classList.add(pulse);
         setTimeout(function () {
             element.classList.remove(pulse);
