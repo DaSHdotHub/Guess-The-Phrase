@@ -124,7 +124,7 @@ main:hover {
 
 /*additional background style for main*/
 main {
-    background-image: url("../img/thinker.webp");
+    background-image: url("../media/img/thinker.webp");
     background-position-y: 70px;
     background-repeat: no-repeat;
     background-size: contain;

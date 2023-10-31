@@ -95,11 +95,33 @@ Responsiveness
 
 Unresolved Bugs: none
 
+## Deployment
+
+### **GitHub Pages**
+
+1. Log in to GitHub and locate [GitHub Repository Bedtime Stories](https://github.com/DaSHdotHub/Guess-the-phrase)
+2. At the navigation bar of the repository tab find "Settings", click.
+3. At the left side under the "Code and automation" section, click on "Pages".
+4. Next locate the "Source" and set it to "Deploy from a branch", branch should be "main", folder set to "root" and then click on the "Save" button.
+5. Head back to the [Project Repository](https://github.com/DaSHdotHub/Guess-the-phrase) and on the right side click on [Deployments](https://github.com/DaSHdotHub/Guess-the-phrase/deployments) and under the "Active deployments" section is the freshly deployed project: [Bedtime Stories](https://dashdothub.github.io/Guess-the-phrase/)
+
+### **Local run**
+
+- In your favourite IDE checkout (clone) the project, e.g. following the GitHub instructions unter the button ![Code Button](assets/media/doc/GitHubCode.webp)
+ button.
+- Make sure python3 is installed.<br>
+- Inside or outside an IDE run following command from the root directory of the project:<br>
+  <code>phyton3 -m http.server</code>
+
 ## Credits
 
 General credit acknowledgements.
 
 ### Software
+
+- Visual Studio Code as IDE with following Extensions:
+![VisualCode Extensions](assets/media/doc/VisualCodeExtensions.webp)
+- CodeAnywhere as IDE, was changed for VSCode due to limitations during the project.
 
 Software credits go here.
 
