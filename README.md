@@ -107,8 +107,7 @@ Unresolved Bugs: none
 
 ### **Local run**
 
-- In your favourite IDE checkout (clone) the project, e.g. following the GitHub instructions unter the button ![Code Button](assets/media/doc/GitHubCode.webp)
- button.
+- In your favourite IDE clone the project, e.g. following the GitHub instructions unter the button ![Code Button](assets/media/doc/GitHubCode.webp).
 - Make sure python3 is installed.<br>
 - Inside or outside an IDE run following command from the root directory of the project:<br>
   <code>phyton3 -m http.server</code>
