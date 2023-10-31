@@ -116,13 +116,16 @@ class QuizApp {
         }
     }
 
-/**
- * Shows the "Correct Phrase" for a given duration of time on the DOM
- * 
- * @param {*} duration - Given duration in milliseconds
- * @param {*} onComplete - Callback 
- */
+    /**
+    * Shows the "Correct Phrase" for a given duration of time on the DOM
+    * Header of the Phrase will be pulsed
+    * Answerbuttons will be disabled for the duration
+    * 
+    * @param {*} duration - Given duration in milliseconds
+    * @param {*} onComplete - Callback 
+    */
     showCorrectPhraseForDuration(duration, onComplete) {
+        this.setAnswerButtonsEnabled(false);
         let originalHeader = document.getElementById("display-question-header").textContent;
         let originalText = document.getElementById("display-question").textContent;
     
@@ -130,14 +133,33 @@ class QuizApp {
         document.getElementById("display-question").textContent = this.data[this.randomQuestionNumber].original_phrase;
 
         this.flashElement('display-question-header');
+
+
         
         startCountdown(duration, () => {
             document.getElementById("display-question-header").textContent = originalHeader;
             document.getElementById("display-question").textContent = originalText;
+            this.setAnswerButtonsEnabled(true);
             if (onComplete) {
                 onComplete();
             }
         });
+    }
+
+    /**
+     * Toggle the answer-buttons on/off
+     * 
+     * @param {boolean} enabled - Boolean state
+     */
+    setAnswerButtonsEnabled(enabled) {
+        let buttons = document.getElementById('answer-button-container').children;
+        for (let button of buttons) {
+            if (enabled) {
+                button.removeAttribute('disabled');
+            } else {
+                button.setAttribute('disabled', 'true');
+            }
+        }
     }
 
     /**
