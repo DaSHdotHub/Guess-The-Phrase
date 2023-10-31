@@ -25,7 +25,7 @@ class QuizApp {
     async loadPhrases() {
         try {
             //await fetch returns a promise in form of an http object which is rather a representation of the JSON, it does not contain it actually.
-            const response = await fetch('assets/data/phrases.json');
+            let response = await fetch('assets/data/phrases.json');
             //awair response returns a second promise, resolving the result of parsing the response body text as JSON.
             this.data = await response.json();
             //CallBack function that runs when data is loaded
@@ -81,13 +81,13 @@ class QuizApp {
     * @returns {Array} - An array of answer objects shuffled.
     */
     generateAnswerObject(wrongOptions, correctWord, numberOfWrongAnswers) {
-        const shuffledWrongOptions = this.fisherYatesShuffle([...wrongOptions]);
-        const selectedWrongOptions = shuffledWrongOptions.slice(0, numberOfWrongAnswers).map(option => ({
+        let shuffledWrongOptions = this.fisherYatesShuffle([...wrongOptions]);
+        let selectedWrongOptions = shuffledWrongOptions.slice(0, numberOfWrongAnswers).map(option => ({
             displayValue: option,
             displayCorrect: false
         }));
 
-        const correctOption = {
+        let correctOption = {
             displayValue: correctWord,
             displayCorrect: true
         };
@@ -103,7 +103,7 @@ class QuizApp {
     checkAnswer(event) {
         //Get clicked answer-button
         if (event.target.classList.contains('answer-button')) {
-            const index = parseInt(event.target.id.toString().slice(-1)) - 1;
+            let index = parseInt(event.target.id.toString().slice(-1)) - 1;
             if (this.displayOptions[index].displayCorrect) {
                 this.incrementScore('correct-score');
                 this.flashScore('correct');

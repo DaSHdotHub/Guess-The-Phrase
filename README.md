@@ -1,39 +1,127 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Marvelous Matching
+## Overview
 
-Welcome,
+QuizGame - brief description
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+TODO: ADD MOCKUP?
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+## Contents
+[Planning & Development](https://github.com/dashdothub/QuizGame#planning--development)
 
-## Codeanywhere Reminders
+[Features](https://github.com/dashdothub/QuizGame#features)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+[Testing](https://github.com/dashdothub/QuizGame#testing)
 
-`python3 -m http.server`
+[Deployment](https://github.com/dashdothub/QuizGame#deployment)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+[Languages](https://github.com/dashdothub/QuizGame#languages)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+[Software](https://github.com/dashdothub/QuizGame#software)
 
-`http_server`
+[Media](https://github.com/dashdothub/QuizGame#media)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+[Credits](https://github.com/dashdothub/QuizGame#credits)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+## Planning & Development
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- 
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+# Features #
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+Below are some features the site currently has to offer and also some features which may be added in future.
 
----
+## Existing Features ##
 
-Happy coding!
+# Testing
+
+- __Testing During Development__
+ 
+* Responsiveness testing 
+
+    
+    I tested the responsivness of the application during the development phase using using the following:
+
+    * Promethean Activboard Interactive Whiteboard. (Firefox for Android)
+    <img src="./readme_images/promethean1.png">
+
+    * HP Pavillion Notebook x360 serving a
+    Smart Technologies SB-480 Interactive Whiteboard.
+
+    * Mac Pro with a 21" Apple Cinema display -- Safari, Chrome and Firefox
+
+    * Macbook pro 13" -- Safari, Chrome and Firefox
+
+    * Toshiba Satellite Pro Laptop 15" (Windows 10) -- Edge, Chrome and Firefox
+
+    * Apple iPad Mini (5th gen) -- Safari and Chrome
+    <img src="./readme_images/ipad_mini.png">
+
+    * Apple iPad (2nd gen -- Safari)
+    <img src="./readme_images/old_ipad.png">
+
+    * Huawei P20 Pro Android Phone -- Chrome and Firefox.
+
+    * Various android tablet devices.
+    <img src="./readme_images/android_tablet.png">
+
+    I also used Google Dev-tools to test the sites responsivness by emulating the apps appearance across other device screen sizes.
+
+    <img src="./readme_images/dev_tools.png">
+
+    At the time of testing, the site was fully responsive across Chrome, Firefox and Safari browsers on all of the above devices with the exeption of the following:
+
+    * The Promethean Activboard would not display box items correctly in the Chromium web browser.
+
+    * The site would not load box images or display correctly on the older iPad2 running ios 9.
+
+    * The site is not practically useable on mobile devices in landscape mode.
+
+    <br>
+
+
+# Deployment
+
+* The site was deployed to GitHub pages. The steps to deploy are as follows:
+    * From this project's repository, navigate to the settings tab
+    * From the left hand menu, select pages.
+    * From the source section drop-down menu, select the Main Branch and click save.
+    * Once the main branch has been selected, the page will refresh and provide a link to the live project. 
+
+The live link can be found here - https://dashdothub.github.io/QuizGame/index.html
+
+   
+# Languages
+
+* The coding languages used to create this site are HTML, CSS and JavaScript.
+
+    <br>
+
+# Software
+
+* Git to create, load and push my code to Github.
+
+* Git, (Gitand Github) as my version control system for the site.
+    
+* Visual Studio Code with installed extensions for
+
+* CodeAnywhere
+
+* VB Cable:
+
+# Media
+
+* The audio was artificially generated in three steps.
+
+
+# Credits
+
+- __Content__
+
+    * All text icons used on the site were sourced from: https://fontawesome.com/search?m=freecom
+
+    * The link to the favicon icon on all four pages is from: https://favicon.io/
+
+<br>
+
+- __Thanks__
