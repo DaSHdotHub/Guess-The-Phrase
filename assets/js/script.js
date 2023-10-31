@@ -128,7 +128,9 @@ class QuizApp {
     
         document.getElementById("display-question-header").textContent = "Correct Phrase";
         document.getElementById("display-question").textContent = this.data[this.randomQuestionNumber].original_phrase;
-    
+
+        this.flashElement('display-question-header');
+        
         startCountdown(duration, () => {
             document.getElementById("display-question-header").textContent = originalHeader;
             document.getElementById("display-question").textContent = originalText;
@@ -157,10 +159,10 @@ class QuizApp {
     flashElement(type) {
         let element = document.getElementById(type);
         let pulse;
-        if (type === 'correct') {
-            pulse = 'greenPulse';
-        } else {
+        if (type === 'incorrect') {
             pulse = 'redPulse';
+        } else {
+            pulse = 'greenPulse';
         }
         element.classList.add(pulse);
         setTimeout(function () {
