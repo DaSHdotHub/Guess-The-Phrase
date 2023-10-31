@@ -291,10 +291,39 @@ function revealHint() {
     });
 }
 
+/**
+ * Sets up event listeners to prevent multiple audios from playing simultaneously.
+ */
+function preventMultipleAudios() {
+    let audioElements = document.querySelectorAll('.audio');
+
+    audioElements.forEach(audioEl => {
+        audioEl.addEventListener('play', function() {
+            pauseOtherAudios(audioEl);
+        });
+    });
+}
+
+/**
+ * Pauses all audio elements except the one that's currently playing.
+ * 
+ * @param {HTMLAudioElement} currentAudio - currently played audio element
+ */
+function pauseOtherAudios(currentAudio) {
+    let audioElements = document.querySelectorAll('.audio');
+
+    audioElements.forEach(audioElement => {
+        if (audioElement !== currentAudio) {
+            audioElement.pause();
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     revealAudioBtn('reveal-intro-btn', 'audio-control-intro');
     revealAudioBtn('reveal-howto-btn', 'audio-control-howto');
     revealAudioBtn('reveal-rules-btn', 'audio-control-rules');
+    preventMultipleAudios();
     revealGame();
     revealHint();
 });
