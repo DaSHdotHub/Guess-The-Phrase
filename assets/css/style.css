@@ -161,6 +161,11 @@ main {
     text-align: justify;
 }
 
+/*Styling for list element inside rules section, exclude last li child*/
+ol li:not(:last-child){
+    padding-bottom: 10px;
+}
+
 /*Styling for quiz section*/
 #game-quiz {
     text-align: center;

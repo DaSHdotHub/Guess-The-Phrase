@@ -96,23 +96,46 @@ class QuizApp {
     }
 
     /**
-    * Checks if the clicked answer button corresponds to the correct answer.
+    * Checks if the clicked answer button corresponds to the correct answer and triggers the next Phrase to display
     * 
     * @param {Event} event - The click event.
     */
     checkAnswer(event) {
-        //Get clicked answer-button
         if (event.target.classList.contains('answer-button')) {
             let index = parseInt(event.target.id.toString().slice(-1)) - 1;
             if (this.displayOptions[index].displayCorrect) {
                 this.incrementScore('correct-score');
-                this.flashScore('correct');
-                this.displayNextQuestion();
+                this.flashElement('correct');
+                this.showCorrectPhraseForDuration(5000, () => {
+                    this.displayNextQuestion();
+                });
             } else {
                 this.incrementScore('incorrect-score');
-                this.flashScore('incorrect');
+                this.flashElement('incorrect');
             }
         }
+    }
+
+/**
+ * Shows the "Correct Phrase" for a given duration of time on the DOM
+ * 
+ * @param {*} duration - Given duration in milliseconds
+ * @param {*} onComplete - Callback 
+ */
+    showCorrectPhraseForDuration(duration, onComplete) {
+        let originalHeader = document.getElementById("display-question-header").textContent;
+        let originalText = document.getElementById("display-question").textContent;
+    
+        document.getElementById("display-question-header").textContent = "Correct Phrase";
+        document.getElementById("display-question").textContent = this.data[this.randomQuestionNumber].original_phrase;
+    
+        startCountdown(duration, () => {
+            document.getElementById("display-question-header").textContent = originalHeader;
+            document.getElementById("display-question").textContent = originalText;
+            if (onComplete) {
+                onComplete();
+            }
+        });
     }
 
     /**
@@ -131,7 +154,7 @@ class QuizApp {
      * 
      * @param {string} type - Type of score to pulse green or red.
      */
-    flashScore(type) {
+    flashElement(type) {
         let element = document.getElementById(type);
         let pulse;
         if (type === 'correct') {
@@ -168,6 +191,34 @@ class QuizApp {
         document.getElementById('game').style.display = "none";
         document.getElementById('reveal-game-btn').style.display = 'block';
     }
+}
+
+/**
+ * Countdown that will show remaining time in seconds and run a callback once timer reaches 0
+ * 
+ * @param {BigInt} duration - in milliseconds 
+ * @param {*} callback - function(s) which should be run
+ */
+function startCountdown(duration, callback) {
+    let timer = duration / 1000;
+    let timerElement = document.getElementById("countdown-timer");
+    let timerText = timerElement.parentNode;
+
+    timerElement.textContent = timer + ' s';
+    timerElement.style.display = 'block';
+    timerText.style.display = 'block';
+
+
+    let countdown = setInterval(() => {
+        timer--;
+        timerElement.textContent = timer + ' s';
+        if (timer <= 0) {
+            clearInterval(countdown);
+            timerElement.style.display = 'none';
+            timerText.style.display = 'none';
+            callback();
+        }
+    }, 1000);
 }
 
 /**
