@@ -1,5 +1,5 @@
 /* Importing external fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;500;600;700;800&family=Ysabeau+Infant:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@500;600;700;800&family=Ysabeau+Infant:wght@500;600&display=swap');
 
 /* Setting global variables */
 :root {
@@ -124,7 +124,7 @@ main:hover {
 
 /*additional background style for main*/
 main {
-    background-image: url("../media/img/thinker.webp");
+    background-image: url("../img/thinker.webp");
     background-position-y: 70px;
     background-repeat: no-repeat;
     background-size: contain;
@@ -161,11 +161,6 @@ main {
     text-align: justify;
 }
 
-/*Styling for list element inside rules section, exclude last li child*/
-ol li:not(:last-child){
-    padding-bottom: 10px;
-}
-
 /*Styling for quiz section*/
 #game-quiz {
     text-align: center;
@@ -183,20 +178,6 @@ ol li:not(:last-child){
     padding: 10px;
     font-size: 17px;
     text-shadow: rgba(255, 179, 0, 0.701) 1px 0 10px;
-}
-
-/*Styling for countdown paragraph*/
-p#countdown-text {
-    padding: 15px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 60%;
-    font-weight: 400;
-    font-size: 14px;
-    transition: box-shadow 0.3s ease;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* Flexbox Container for Buttons */
@@ -228,12 +209,6 @@ p#countdown-text {
     color: white;
     background-color: #0077ff;
     letter-spacing: 1.3px;
-}
-
-button#reveal-game-btn {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /*Outer footer styling*/

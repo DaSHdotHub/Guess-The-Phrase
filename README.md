@@ -1,4 +1,5 @@
 # Guess The Phrase
+
 ## Overview
 
 Guess The Phrase - brief description
@@ -7,29 +8,33 @@ TODO: ADD MOCKUP?
 
 ## Table of Contents
 
-- [Guess the Phrase](#guess-the-phrase)
-- [Overview](#overview)
-- [Intro](#intro)
-- [Features](#features)
-  - [Header](#header)
-  - [Main](#main)
-  - [Footer](#footer)
-  - [Future Features](#future-features)
-- [Manual Testing](#manual-testing)
-  - [Features Testing](#features-testing)
-  - [Lighthouse Performance](#lighthouse-performance)
-  - [Validator Testing](#validator-testing)
-    - [HTML - W3C - Markup Validation Service](#html---w3c---markup-validation-service)
-    - [CSS - W3C - CSS Validation Service](#css---w3c---css-validation-service)
-    - [JS Validation](#js-validation)
-  - [Browser Compatibility](#browser-compatibility)
-  - [Screen size responsiveness](#screen-size-responsiveness)
-  - [Bugs resolved and unresolved](#bugs-resolved-and-unresolved)
-- [Credits](#credits)
-  - [Software](#software)
-  - [Hardware](#hardware)
-  - [Inspirations](#inspirations)
-  - [Resources](#resources)
+- [Guess The Phrase](#guess-the-phrase)
+  - [Overview](#overview)
+  - [Table of Contents](#table-of-contents)
+  - [Intro](#intro)
+  - [Features](#features)
+    - [Header](#header)
+    - [Main](#main)
+    - [Footer](#footer)
+    - [Future Features](#future-features)
+  - [Manual Testing](#manual-testing)
+    - [Features Testing](#features-testing)
+    - [Lighthouse Performance](#lighthouse-performance)
+    - [Validator Testing](#validator-testing)
+      - [HTML - W3C - Markup Validation Service](#html---w3c---markup-validation-service)
+      - [CSS - W3C - CSS Validation Service](#css---w3c---css-validation-service)
+      - [JS Validation](#js-validation)
+    - [Browser Compatibility](#browser-compatibility)
+    - [Screen size responsiveness](#screen-size-responsiveness)
+    - [Bugs resolved and unresolved](#bugs-resolved-and-unresolved)
+  - [Deployment](#deployment)
+    - [**GitHub Pages**](#github-pages)
+    - [**Local run**](#local-run)
+  - [Credits](#credits)
+    - [Software](#software)
+    - [Hardware](#hardware)
+    - [Inspirations](#inspirations)
+    - [Resources](#resources)
 
 ## Intro
 
@@ -119,7 +124,7 @@ General credit acknowledgements.
 ### Software
 
 - Visual Studio Code as IDE with following Extensions:
-![VisualCode Extensions](assets/media/doc/VisualCodeExtensions.webp)
+  ![VisualCode Extensions](assets/media/doc/VisualCodeExtensions.webp)
 - CodeAnywhere as IDE, was changed for VSCode due to limitations during the project.
 
 Software credits go here.
