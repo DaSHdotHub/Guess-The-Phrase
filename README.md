@@ -10,33 +10,45 @@ The primary goal of this game is not for the user to compete against a computer 
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Features](#features)
-  - [Header](#header)
-  - [Main](#main)
-  - [Footer](#footer)
-  - [Future Features](#future-features)
-- [Design](#design)
-- [Technologies, Libraries & Sources](#technologies-libs--sources)
-  - [Technologies](#technologies)
-  - [Libraries & Sources](#libs--sources)
-- [Frameworks, Software & Hardware](#frameworks-software-hardware)
-  - [Frameworks](#frameworks)
-  - [Software](#software)
-  - [Hardware](#hardware)
-- [Manual Testing](#manual-testing)
-  - [Features Testing](#features-testing)
-  - [Lighthouse Performance](#lighthouse-performance)
-  - [Validator Testing](#validator-testing)
-  - [Browser Compatibility](#browser-compatibility)
-  - [Screen size responsiveness](#screen-size-responsiveness)
-  - [Bugs](#bugs-resolved-and-unresolved)
-- [Deployment](#deployment)
-- [Credits](#credits)
-  - [Inspirations](#inspirations)
-  - [Resources](#resources)
-
-
+- [Guess The Phrase](#guess-the-phrase)
+  - [Introduction](#introduction)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+    - [Header](#header)
+    - [Main](#main)
+    - [Footer](#footer)
+    - [Future Features (not planned)](#future-features-not-planned)
+  - [Design](#design)
+  - [Technologies, Libraries \& Sources](#technologies-libraries--sources)
+    - [**Technologies**](#technologies)
+    - [**Libraries \& Sources**](#libraries--sources)
+  - [Frameworks, Software \& Hardware](#frameworks-software--hardware)
+    - [**Frameworks**](#frameworks)
+    - [**Software**](#software)
+    - [**Hardware**](#hardware)
+  - [Manual Testing](#manual-testing)
+    - [Features Testing](#features-testing)
+      - [**Visuals**](#visuals)
+      - [**Logic**](#logic)
+    - [Lighthouse Performance](#lighthouse-performance)
+      - [**Mobile**](#mobile)
+      - [**Desktop**](#desktop)
+    - [Validator Testing](#validator-testing)
+      - [**HTML - W3C - Markup Validation Service**](#html---w3c---markup-validation-service)
+      - [**CSS - W3C - CSS Validation Service**](#css---w3c---css-validation-service)
+      - [**JS Validation**](#js-validation)
+    - [Browser Compatibility](#browser-compatibility)
+  - [Browsers support](#browsers-support)
+    - [Screen size responsiveness](#screen-size-responsiveness)
+    - [Bugs resolved and unresolved](#bugs-resolved-and-unresolved)
+  - [Deployment](#deployment)
+    - [**GitHub Pages**](#github-pages)
+    - [**Local run**](#local-run)
+  - [Credits](#credits)
+    - [**Inspirations**](#inspirations)
+    - [**Resources**](#resources)
+      - [Media](#media)
+    - [**Also**](#also)
 
 ## Features
 
@@ -104,10 +116,12 @@ No Frameworks were used; *vanilla* JavaScript is the key to this project.
 
 ### **Hardware**
 
-**Used for development:** 
+**Used for development:**
+
 - MacBook Pro M1 (2020)
 
-**Used for Testing:** 
+**Used for Testing:**
+
 - MacBook Pro M1 (2020)
 - Redmi 11S
 - iPhone SE (2022)
@@ -123,6 +137,7 @@ The website was tested on both Android and iOS devices. Desktop and various brow
 The testing was split into visuals and logic.
 
 #### **Visuals**
+
 | Action                                 | Expected Reaction                           | Test Result |
 |----------------------------------------|---------------------------------------------|-------------|
 | Navbar: Hover                          | Enlarged hovered section title              | Success     |
@@ -137,7 +152,6 @@ The testing was split into visuals and logic.
 | Phrase: User Answers Correctly         | Timer is displayed                          | Success     |
 | Display of Next Phrase                 | Hint is closed                              | Success     |
 | Footer Icon: Hover                     | Icon enlarges                               | Success     |
-
 
 #### **Logic**
 
@@ -154,10 +168,10 @@ The testing was split into visuals and logic.
 | All Answers Correct                   | Displays "New game?" alert                  | Success     |
 | From 2nd Game Onwards                 | Resets result to 0                          | Success     |
 
-
 ### Lighthouse Performance
 
 #### **Mobile**
+
 Almost perfect score:
 <br>
 ![Mobile result](assets/media/doc/validator/lighthouse_mobile_small.webp).
@@ -165,6 +179,7 @@ Almost perfect score:
 You can also view the full [report!](https://dashdothub.github.io/Guess-The-Phrase/assets/media/doc/validator/lighthouse_mobile.html)
 
 #### **Desktop**
+
 Perfect score!
 <br>
 ![Desktop result](assets/media/doc/validator/lighthouse_desktop_small.webp).
@@ -219,7 +234,6 @@ In the console one error keeps popping out.
 ![Console Error](assets/media/doc/bugs/ConsoleError.webp)<br>
 The error does not hinder any functionality of the webapp or dose have any other influence on the project.
 
-
 ## Deployment
 
 ### **GitHub Pages**
@@ -243,7 +257,7 @@ The error does not hinder any functionality of the webapp or dose have any other
 ### **Inspirations**
 
 For this project, my assigned mentor encouraged me to go for a quiz game, after a short use of search engines I found this website <br>
-https://www.ef.co.uk/english-resources/english-quotes/famous/ (Link was last checked checked on 01.11.2023) <br>
+<https://www.ef.co.uk/english-resources/english-quotes/famous/> (Link was last checked checked on 01.11.2023) <br>
 Therefore my idea was born to make a game of guessing the correct phrases.
 
 All design patterns were created by myself.
@@ -251,17 +265,17 @@ All design patterns were created by myself.
 ### **Resources**
 
 #### Media
-* [ChatGPT](https://chat.openai.com/) <br>The texts for introduction, howto and rules were written down by myself, afterwards they were altered by ChatGPT v4 to have a specific appealing language.
-* [NaturalReaders](https://www.naturalreaders.com/online/)<br>
-Audio was created help of this website.
-* [Convertio.co](https://convertio.co/)<br>
-Images and Screenshots were converted by webservice
-* [Godban@GitHub](https://godban.github.io/browsers-support-badges/)<br> Browser compatibility table for this readme.
-* [FontAwesome.com](https://fontawesome.com/)<br> For the icons used in the footer.
-* [FavIcon.io](https://favicon.io)<br>
-Created the favicon
 
+* [ChatGPT](https://chat.openai.com/) <br>The texts for introduction, howto and rules were written down by myself, afterwards they were altered by ChatGPT v4 to have a specific appealing language.
+- [NaturalReaders](https://www.naturalreaders.com/online/)<br>
+Audio was created help of this website.
+- [Convertio.co](https://convertio.co/)<br>
+Images and Screenshots were converted by webservice
+- [Godban@GitHub](https://godban.github.io/browsers-support-badges/)<br> Browser compatibility table for this readme.
+- [FontAwesome.com](https://fontawesome.com/)<br> For the icons used in the footer.
+- [FavIcon.io](https://favicon.io)<br>
+Created the favicon
 
 ### **Also**
 
-* Big thanks to my wife and my child who are always supporting me at their best :-) 
+- Big thanks to my wife and my child who are always supporting me at their best :-)

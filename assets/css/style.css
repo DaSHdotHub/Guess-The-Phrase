@@ -162,7 +162,7 @@ main {
 }
 
 /*Styling for list element inside rules section, exclude last li child*/
-ol li:not(:last-child){
+ol li:not(:last-child) {
     padding-bottom: 10px;
 }
 
@@ -340,6 +340,7 @@ footer>div {
     h1 {
         text-align: center;
     }
+
     #menu {
         display: flex;
         flex-direction: column;

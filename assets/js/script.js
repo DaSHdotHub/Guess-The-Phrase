@@ -84,18 +84,18 @@ class QuizApp {
         do {
             this.randomQuestionNumber = Math.floor(Math.random() * this.data.length);
         } while (this.alreadyQuestioned.includes(this.randomQuestionNumber));
-        
+
         let questionObject = this.data[this.randomQuestionNumber];
         let wrongOptions = this.data[this.randomQuestionNumber].wrong_options;
         let numberOfPossibleAnswers = DOMHelper.getElementById('answer-button-container').children.length;
 
         this.displayOptions = this.generateAnswerObject(wrongOptions, questionObject.original_word, numberOfPossibleAnswers - 1);
 
-        DOMHelper.setTextContent('display-question',questionObject.altered_phrase);
-        DOMHelper.setTextContent('display-hint',questionObject.source);
+        DOMHelper.setTextContent('display-question', questionObject.altered_phrase);
+        DOMHelper.setTextContent('display-hint', questionObject.source);
 
         for (let i = 0; i < numberOfPossibleAnswers; i++) {
-            DOMHelper.setTextContent(`answer${i + 1}`,this.displayOptions[i].displayValue);
+            DOMHelper.setTextContent(`answer${i + 1}`, this.displayOptions[i].displayValue);
         }
         this.alreadyQuestioned.push(this.randomQuestionNumber);
     }
@@ -163,14 +163,14 @@ class QuizApp {
         let originalHeader = document.getElementById('display-question-header').textContent;
         let originalText = document.getElementById('display-question').textContent;
 
-        DOMHelper.setTextContent('display-question-header','Correct Phrase:');
-        DOMHelper.setTextContent('display-question',this.data[this.randomQuestionNumber].original_phrase);
+        DOMHelper.setTextContent('display-question-header', 'Correct Phrase:');
+        DOMHelper.setTextContent('display-question', this.data[this.randomQuestionNumber].original_phrase);
 
         this.flashElement('display-question');
 
         startCountdown(duration, () => {
-            DOMHelper.setTextContent('display-question-header',originalHeader);
-            DOMHelper.setTextContent('display-question',originalText);
+            DOMHelper.setTextContent('display-question-header', originalHeader);
+            DOMHelper.setTextContent('display-question', originalText);
             this.setAnswerButtonsEnabled(true);
             if (onComplete) {
                 onComplete();
@@ -245,10 +245,10 @@ class QuizApp {
     gameFinished() {
         this.alreadyQuestioned = [];
         alert("Congratulation! You've corrected all phrases in this game. Press ok if you want to play again.");
-        DOMHelper.setDisplayStyle('game','none');
-        DOMHelper.setDisplayStyle('reveal-game-btn','flex');
+        DOMHelper.setDisplayStyle('game', 'none');
+        DOMHelper.setDisplayStyle('reveal-game-btn', 'flex');
         DOMHelper.addEventListener('reveal-game-btn', 'click', handleRevealGameClick);
-        DOMHelper.setTextContent('display-hint','Wait for the next game to start...');
+        DOMHelper.setTextContent('display-hint', 'Wait for the next game to start...');
     }
 }
 
@@ -354,11 +354,11 @@ function pauseOtherAudios(currentAudio) {
 */
 function toggleHint() {
     if (DOMHelper.getElementById('game-hint').style.display === 'none') {
-        DOMHelper.setDisplayStyle('game-hint','block');
-        DOMHelper.setDisplayStyle('game-hint-header','none');
+        DOMHelper.setDisplayStyle('game-hint', 'block');
+        DOMHelper.setDisplayStyle('game-hint-header', 'none');
     } else {
-        DOMHelper.setDisplayStyle('game-hint','none');
-        DOMHelper.setDisplayStyle('game-hint-header','block');
+        DOMHelper.setDisplayStyle('game-hint', 'none');
+        DOMHelper.setDisplayStyle('game-hint-header', 'block');
     }
 }
 
