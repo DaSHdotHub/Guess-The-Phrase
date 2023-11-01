@@ -72,42 +72,53 @@ How to Features were tested
 
 #### **Mobile**
 Almost perfect score:
+<br>
 ![Mobile result](assets/media/doc/validator/lighthouse_mobile_small.webp).
-You can also view the full [report!](assets/media/doc/validator/lighthouse_mobile.html)
+<br>
+You can also view the full [report!](https://dashdothub.github.io/Guess-The-Phrase/assets/media/doc/validator/lighthouse_mobile.html)
 
 #### **Desktop**
 Perfect score!
+<br>
 ![Desktop result](assets/media/doc/validator/lighthouse_desktop_small.webp).
-You can also view the full [report!](assets/media/doc/validator/lighthouse_desktop.html)
+<br>
+You can also view the full [report!](ttps://dashdothub.github.io/Guess-The-Phrase/assets/media/doc/validator/lighthouse_desktop.html)
 
 ### Validator Testing
 
 Introduction to validator testing.
 
-#### HTML - W3C - Markup Validation Service
+#### **HTML - W3C - Markup Validation Service**
 
 No Errors found, trailing slashes from special tags like '<meta>' were removed for not having any 'INFO' messages in the validator.
 <details>
-![HTML result](assets/media/doc/validator/w3c_html_result.webp)
+<summary>Validation result:</summary>
+<img src="assets/media/doc/validator/w3c_html_result.webp" alt="HTML Validation result">
 </details>
 
-#### CSS - W3C - CSS Validation Service
+#### **CSS - W3C - CSS Validation Service**
 
 No Errors found, warnings were displayed. Imported Fonts could not be checked. CSS variables are currently not statically checked.
 <details>
-![CSS result](assets/media/doc/validator/w3c_css_result.webp)
+<summary>Validation result:</summary>
+<img src="assets/media/doc/validator/w3c_css_result.webp" alt="CSS Validation result">
 </details>
 
-#### JS Validation
+#### **JS Validation**
 
 No Errors found, two warnings. Async functions are only available with jshint from ES8
 <details>
-![CSS result](assets/media/doc/validator/w3c_css_result.webp)
+<summary>Validation result:</summary>
+<img src="assets/media/doc/validator/jshint_result.webp" alt="JS Validation result">
 </details>
 
 ### Browser Compatibility
 
-Checked different browsers?
+## Browsers support
+
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari-ios/safari-ios_48x48.png" alt="iOS Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>iOS Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Opera |
+| --------- | --------- | --------- | --------- | --------- | --------- |
+| IE11, Edge| last 2 versions| last 2 versions| last 2 versions| last 2 versions| last 2 versions
 
 ### Screen size responsiveness
 
@@ -115,7 +126,12 @@ Responsiveness
 
 ### Bugs resolved and unresolved
 
-Unresolved Bugs: none
+On game end. After all phrases were asked the hint will be overwritten only when a new game will be started.
+
+In the console one error keeps popping out.
+![Console Error](assets/media/doc/bugs/ConsoleError.webp)<br>
+The error does not hinder any functionality of the webapp or dose have any other influence on the project.
+
 
 ## Deployment
 
@@ -129,7 +145,8 @@ Unresolved Bugs: none
 
 ### **Local run**
 
-- In your favourite IDE clone the project, e.g. following the GitHub instructions unter the button ![Code Button](assets/media/doc/GitHubCode.webp).
+- In your favourite IDE clone the project, e.g. following the GitHub instructions unter the button <br>
+![Code Button](assets/media/doc/GitHubCode.webp).
 - Make sure python3 is installed.<br>
 - Inside or outside an IDE run following command from the root directory of the project:<br>
   <code>phyton3 -m http.server</code>
@@ -141,7 +158,11 @@ General credit acknowledgements.
 ### Software
 
 - Visual Studio Code as IDE with following Extensions:
-  ![VisualCode Extensions](assets/media/doc/VisualCodeExtensions.webp)
+  <details>
+  <summary>VExtensions:</summary>
+  <img src="assets/media/doc/VisualCodeExtensions.webp" alt="Visual Studio Code Extensions">
+  </details>
+
 - CodeAnywhere as IDE, was changed for VSCode due to limitations during the project.
 
 Software credits go here.
@@ -156,4 +177,4 @@ List or details of inspirations go here.
 
 ### Resources
 
-List or resources used in this project.
+* Browser compatibility - https://godban.github.io/browsers-support-badges/
