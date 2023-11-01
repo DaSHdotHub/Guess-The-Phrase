@@ -337,6 +337,9 @@ footer>div {
 
 /*Ensures the nav-bar stays visible and is not cut off*/
 @media only screen and (max-width: 374px) {
+    h1 {
+        text-align: center;
+    }
     #menu {
         display: flex;
         flex-direction: column;

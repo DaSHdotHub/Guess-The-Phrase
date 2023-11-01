@@ -17,6 +17,12 @@ TODO: ADD MOCKUP?
     - [Main](#main)
     - [Footer](#footer)
     - [Future Features](#future-features)
+  - [Design]
+  - [Technologies]
+  - [Frameworks Software Hardware]
+    - [Frameworks](#frameworks)
+    - [Software](#software)
+    - [Hardware](#hardware)
   - [Manual Testing](#manual-testing)
     - [Features Testing](#features-testing)
     - [Lighthouse Performance](#lighthouse-performance)
@@ -31,8 +37,6 @@ TODO: ADD MOCKUP?
     - [**GitHub Pages**](#github-pages)
     - [**Local run**](#local-run)
   - [Credits](#credits)
-    - [Software](#software)
-    - [Hardware](#hardware)
     - [Inspirations](#inspirations)
     - [Resources](#resources)
 
@@ -59,6 +63,56 @@ Footer-specific content here.
 ### Future Features
 
 Future features content here.
+
+## Design
+
+## Technologies - Libs & Sources
+
+### **Technologies**
+
+ * [HTML5](https://en.wikipedia.org/wiki/HTML5)
+ * [CSS3](https://en.wikipedia.org/wiki/CSS)
+ * [Javascirpt](https://en.wikipedia.org/wiki/JavaScript)
+ * [Oop](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming) - Concept of Object-oriented programming
+
+### **Libs & Sources**
+
+* [Git](https://git-scm.com/) - For vesion control.
+ * [Github](https://github.com/)  - Deployment of the website and storing the files online.
+ * [Google Fonts](https://fonts.google.com/)  - Import main fonts for the website.
+* [Am I Responsive](https://ui.dev/amiresponsive) - Mockup responsive picture for the README file.
+
+## Frameworks Software Hardware
+
+### **Frameworks**
+
+* No Frameworkds were used, <i>vanilla</i> JavaScript is key of this project.
+
+### **Software**
+
+* <strong>Visual Studio Code</strong> as IDE with following Extensions:
+  <details>
+  <summary>Extensions:</summary>
+  <img src="assets/media/doc/VisualCodeExtensions.webp" alt="Visual Studio Code Extensions">
+  </details>
+
+* <strong>CodeAnywhere</strong> as IDE, was changed in favour of VSCode due to restrictions in CodeAnywhere.
+* <strong>QuickTime Player</strong> in combinatiion with <strong>VB Cable</strong> for creating the recordings for the audio files, also trimming them for them just to have the correct length.
+* <strong>Google Chrome</strong> for the main development
+* <strong>Chrome Dev Tools</strong> for the main development, debugging and logging.
+* <strong>Slack</strong> for interaction with my cohort and my mentor.
+
+### **Hardware**
+
+**Used for development:** <br>
+* MacBook Pro M1 (2020)
+
+**Used for Testing:** <br>
+* MacBook Pro M1 (2020)
+* Redmi 11S
+* iPhone SE (2022)
+* iPhone 13 Pro
+* iPhone 14 Pro Max
 
 ## Manual Testing
 
@@ -161,39 +215,19 @@ Therefore my idea was born to make a game of guessing the correct phrases.
 
 All design patterns were created by myself.
 
-### **Software**
-
-* <strong>Visual Studio Code</strong> as IDE with following Extensions:
-  <details>
-  <summary>Extensions:</summary>
-  <img src="assets/media/doc/VisualCodeExtensions.webp" alt="Visual Studio Code Extensions">
-  </details>
-
-* <strong>CodeAnywhere</strong> as IDE, was changed in favour of VSCode due to restrictions in CodeAnywhere.
-* <strong>QuickTime Player</strong> in combinatiion with <strong>VB Cable</strong> for creating the recordings for the audio files, also trimming them for them just to have the correct length.
-* <strong>Google Chrome</strong> for the main development
-* <strong>Chrome Dev Tools</strong> for the main development, debugging and logging.
-* <strong>Slack</strong> for interaction with my cohort and my mentor.
-
-### **Hardware**
-
-**Used for development:** <br>
-* MacBook Pro M1 (2020)
-
-**Used for Testing:** <br>
-* MacBook Pro M1 (2020)
-* Redmi 11S
-* iPhone SE (2022)
-* iPhone 13 Pro
-* iPhone 14 Pro Max
-
 ### **Resources**
 
 #### Media
-* The texts for introduction, howto and rules were written down by myself, afterwards they were altered by ChatGPT v4 to have a specific language.
-* Audio was created with - https://www.naturalreaders.com/online/ (Link was last checked checked on 01.11.2023)
-* Images and Screenshots were converted by webservice -  https://convertio.co/ (Link was last checked checked on 01.11.2023)
-* Browser compatibility - https://godban.github.io/browsers-support-badges/ (Link was last checked checked on 01.11.2023)
+* [ChatGPT](https://chat.openai.com/) <br>The texts for introduction, howto and rules were written down by myself, afterwards they were altered by ChatGPT v4 to have a specific appealing language.
+* [NaturalReaders](https://www.naturalreaders.com/online/)<br>
+Audio was created help of this website.
+* [Convertio.co](https://convertio.co/)<br>
+Images and Screenshots were converted by webservice
+* [Godban@GitHub](https://godban.github.io/browsers-support-badges/)<br> Browser compatibility table for this readme.)
+* [FontAwesome.com](https://fontawesome.com/)<br> For the icons used in the footer.
+* [FavIcon.io](https://favicon.io)<br>
+Created the favicon
+
 
 ### **Also**
 

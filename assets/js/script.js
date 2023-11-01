@@ -253,7 +253,7 @@ class QuizApp {
 /**
  * Countdown that will show remaining time in seconds and run a callback once timer reaches 0
  * 
- * @param {BigInt} duration - in milliseconds 
+ * @param {Integer} duration - in milliseconds 
  * @param {*} callback - function(s) which should be run
  */
 function startCountdown(duration, callback) {
