@@ -14,9 +14,6 @@ The primary goal of this game is not for the user to compete against a computer 
   - [Introduction](#introduction)
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
-    - [Header](#header)
-    - [Main](#main)
-    - [Footer](#footer)
     - [Future Features (not planned)](#future-features-not-planned)
   - [Design](#design)
   - [Technologies, Libraries \& Sources](#technologies-libraries--sources)
@@ -39,7 +36,6 @@ The primary goal of this game is not for the user to compete against a computer 
       - [**JS Validation**](#js-validation)
     - [Browser Compatibility](#browser-compatibility)
   - [Browsers support](#browsers-support)
-    - [Screen size responsiveness](#screen-size-responsiveness)
     - [Bugs resolved and unresolved](#bugs-resolved-and-unresolved)
   - [Deployment](#deployment)
     - [**GitHub Pages**](#github-pages)
@@ -52,20 +48,6 @@ The primary goal of this game is not for the user to compete against a computer 
 
 ## Features
 
-General feature content here.
-
-### Header
-
-Header-specific content here.
-
-### Main
-
-Main content-specific details here.
-
-### Footer
-
-Footer-specific content here.
-
 ### Future Features (not planned)
 
 - Attach a Backend, e.g., for Highscore functionality, larger pool of questions/phrases.
@@ -74,7 +56,24 @@ Footer-specific content here.
 
 ## Design
 
-[Add your design details here]
+Rather simple but clear design patterns.
+
+### **Fonts**
+
+* Ysabeau Infant <br>
+
+      A serif font for headings of type h1 and h2, also used for the footer.
+
+* Roboto Flex <br>
+
+      This 'sans-serif' font in combination with the Ysabeau Infant works great. Robot Flex is easy to read for even longer texts and therefore was chosen for the content.
+
+
+### **Colors**
+
+| Used for Background gradient| Highlight buttons on hover|Theme color for footer| Highlight correct answer|Highlight incorrect answer|
+|----------------------------------------|---------------------------------------------|-------------|----------|--------|
+|![Gradient blue](assets/media/doc/colors/00c3ff.webp)|![Accent blue](assets/media/doc/colors/0077ff.webp)|![footer dark](assets/media/doc/colors/303030.webp)|![highlight lightgreen](assets/media/doc/colors/90ee90.webp)|![highlight lightcoral](assets/media/doc/colors/f08080.webp)|
 
 ## Technologies, Libraries & Sources
 
@@ -188,7 +187,7 @@ You can also view the full [report!](https://dashdothub.github.io/Guess-The-Phra
 
 ### Validator Testing
 
-Introduction to validator testing.
+There are three validators that were used to analyse the code.
 
 #### **HTML - W3C - Markup Validation Service**
 
@@ -268,9 +267,9 @@ All design patterns were created by myself.
 
 * [ChatGPT](https://chat.openai.com/) <br>The texts for introduction, howto and rules were written down by myself, afterwards they were altered by ChatGPT v4 to have a specific appealing language.
 - [NaturalReaders](https://www.naturalreaders.com/online/)<br>
-Audio was created help of this website.
+Audio was created with the help of this website.
 - [Convertio.co](https://convertio.co/)<br>
-Images and Screenshots were converted by webservice
+Images and Screenshots were converted by this webservice
 - [Godban@GitHub](https://godban.github.io/browsers-support-badges/)<br> Browser compatibility table for this readme.
 - [FontAwesome.com](https://fontawesome.com/)<br> For the icons used in the footer.
 - [FavIcon.io](https://favicon.io)<br>
