@@ -1,15 +1,17 @@
 # Guess The Phrase
 
-## Overview
+## Introduction
 
-Guess The Phrase - brief description
+[Guess The Phrase]() is a fun quiz game featuring 25 phrases. These phrases have been sourced from movies, theaters, books, and even pangrams. However, somewhere along the line, something went awry. A computer algorithm jumbled the phrases and interjected them with <i>IT key- and buzzwords</i>. Now, it's up to the user to correct the mistakes made by the algorithm.
 
-TODO: ADD MOCKUP?
+The primary goal of this game isn't for the user to compete against a computer or another player, but rather to enjoy their time and select the correct answer for each altered phrase. Suitable for all ages.
+
+![Resposive Mock](assets/media/doc/resposiveMock.webp)
 
 ## Table of Contents
 
 - [Guess The Phrase](#guess-the-phrase)
-  - [Overview](#overview)
+  - [Introduction](#introduction)
   - [Table of Contents](#table-of-contents)
   - [Intro](#intro)
   - [Features](#features)
@@ -17,9 +19,9 @@ TODO: ADD MOCKUP?
     - [Main](#main)
     - [Footer](#footer)
     - [Future Features](#future-features)
-  - [Design]
-  - [Technologies]
-  - [Frameworks Software Hardware]
+  - [Design](#design)
+  - [Technologies](#technologies---libs--sources)
+  - [Frameworks Software Hardware](#frameworks-software-hardware)
     - [Frameworks](#frameworks)
     - [Software](#software)
     - [Hardware](#hardware)
