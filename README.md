@@ -60,11 +60,15 @@ Main content-specific details here.
 
 Footer-specific content here.
 
-### Future Features
+### Future Features (not planned)
 
-Future features content here.
+* Attach a Backend for e.g. Highscore functionality, greater pool of questions/ phrases
+* Add more display languages to the frontend, e.g german, french.
+* Add similar quiz games in e.g. new frames or tabs
 
 ## Design
+
+
 
 ## Technologies - Libs & Sources
 
@@ -78,9 +82,11 @@ Future features content here.
 ### **Libs & Sources**
 
 * [Git](https://git-scm.com/) - For vesion control.
- * [Github](https://github.com/)  - Deployment of the website and storing the files online.
- * [Google Fonts](https://fonts.google.com/)  - Import main fonts for the website.
+* [Github](https://github.com/)  - Deployment of the website and storing the files online.
+* [Google Fonts](https://fonts.google.com/)  - Import main fonts for the website.
 * [Am I Responsive](https://ui.dev/amiresponsive) - Mockup responsive picture for the README file.
+* [W3C Javascript](https://www.w3schools.com/js/js_callback.asp) - Howto: Callbacks, Async/ Await functionality
+* [GeeksForGeeks](https://www.geeksforgeeks.org/css-gradients/) - Howto: CSS Gradients, also pulse animnations
 
 ## Frameworks Software Hardware
 
@@ -116,11 +122,42 @@ Future features content here.
 
 ## Manual Testing
 
-Introduction or overview of your manual testing.
+The website was tested on Android as well as on iOS devices. Desktop and different browsers mentioned in the [Browser Compatibility](#browser-compatibility).
 
 ### Features Testing
 
-How to Features were tested
+The testing was split into visuals and logic.
+
+#### **Visuals**
+| Actio                        	| Reactio            	| Test    	|
+|------------------------------	|--------------------	|---------	|
+| Navbar: hover                 	| Hovered section title enlarged            	| success 	|
+| Section: hover                	| shadow appearing   	| success 	|
+| Audio-Button: hover           	| enlarge inner Text            	| success 	|
+| Audio-Button: hover           	| highlight          	| success 	|
+| Audio-Button: click           	| show Audio-Control 	| success 	|
+| Audio-Button: click           	| hide Audio-Button  	| success 	|
+| Correct Score: changeOfValue     	| highlight          	| success 	|
+| InCorrect Score: changeOfValue   	| highlight          	| success 	|
+| Phrase: User Answered Correctly 	| highlight          	| success 	|
+| Phrase: Uuser Answered Correctly 	| showTimer          	| success 	|
+| On display of next phrase            	| Hint is closed     	| success 	|
+| Footer-Icon: hover           	| Icon is enlarged     	| success 	|
+
+#### **Logic**
+
+| Actio                  	| Reactio                             	| Test    	|
+|------------------------	|-------------------------------------	|---------	|
+| Navbar: click           	| Navigate to section                 	| success 	|
+| Audio-Control: play     	| Play audio                          	| success 	|
+| Audio-Control: play     	| Stop other audio                    	| success 	|
+| InCorrect-Answer: click 	| InCorrect Counter + 1               	| success 	|
+| Correct-Answer: click   	| Correct Counter + 1                 	| success 	|
+| Correct-Answer: click   	| Display Correct Phrase              	| success 	|
+| Correct-Answer: click   	| Disable Answer Buttons with timeout 	| success 	|
+| Hint: click             	| Toggle display of Hint section      	| success 	|
+| All answers correct    	| Alert - new game?                   	| success 	|
+| From 2nd Game          	| Result restored to 0                	| success 	|
 
 ### Lighthouse Performance
 
@@ -136,7 +173,7 @@ Perfect score!
 <br>
 ![Desktop result](assets/media/doc/validator/lighthouse_desktop_small.webp).
 <br>
-You can also view the full [report!](ttps://dashdothub.github.io/Guess-The-Phrase/assets/media/doc/validator/lighthouse_desktop.html)
+You can also view the full [report!](https://dashdothub.github.io/Guess-The-Phrase/assets/media/doc/validator/lighthouse_desktop.html)
 
 ### Validator Testing
 
@@ -180,7 +217,7 @@ Responsiveness
 
 ### Bugs resolved and unresolved
 
-On game end. After all phrases were asked the hint will be overwritten only when a new game will be started.
+On game end. After all phrases were asked the hint will be overwritten only when a new game will be started. <br> <i>Fixed on 01.11.2023</i>
 
 In the console one error keeps popping out.
 ![Console Error](assets/media/doc/bugs/ConsoleError.webp)<br>
@@ -223,7 +260,7 @@ All design patterns were created by myself.
 Audio was created help of this website.
 * [Convertio.co](https://convertio.co/)<br>
 Images and Screenshots were converted by webservice
-* [Godban@GitHub](https://godban.github.io/browsers-support-badges/)<br> Browser compatibility table for this readme.)
+* [Godban@GitHub](https://godban.github.io/browsers-support-badges/)<br> Browser compatibility table for this readme.
 * [FontAwesome.com](https://fontawesome.com/)<br> For the icons used in the footer.
 * [FavIcon.io](https://favicon.io)<br>
 Created the favicon
