@@ -246,6 +246,7 @@ class QuizApp {
         alert("Congratulation! You've corrected all phrases in this game. Press ok if you want to play again.");
         DOMHelper.setDisplayStyle('game','none');
         DOMHelper.setDisplayStyle('reveal-game-btn','flex');
+        DOMHelper.addEventListener('reveal-game-btn', 'click', handleRevealGameClick);
     }
 }
 
@@ -294,20 +295,27 @@ function revealAudioBtn(buttonId, audioControlId) {
 }
 
 /**
-*Reveal the display of the quiz and reset the event listener
+ * Event handler for the 'click' event on the 'reveal-game-btn' button.
+ * - Toggles the display state of the game element
+ * - Initializes a new instance of the QuizApp and invokes its initialization.
+ * - Hides the clicked button
+ * - Removes itself as an event listener to prevent subsequent triggers.
+ * 
+ * @param {Event} event - The triggered event object.
+ */
+function handleRevealGameClick(event) {
+    let gameDisplayState = DOMHelper.getElementById('game').style.display;
+    DOMHelper.setDisplayStyle('game', gameDisplayState === 'none' ? 'block' : 'none');
+    let app = new QuizApp();
+    app.init();
+    event.target.style.display = 'none';
+    DOMHelper.removeEventListener('reveal-game-btn', 'click', handleRevealGameClick);
+}
+
+/**
+* Add Event Listener to reveal the game
 */
 function revealGame() {
-    function handleRevealGameClick(event) {
-        let gameDisplayState = DOMHelper.getElementById('game').style.display;
-        DOMHelper.setDisplayStyle('game', gameDisplayState === 'none' ? 'block' : 'none');
-        let app = new QuizApp();
-        app.init();
-        event.target.style.display = 'none';
-
-        // Remove this event listener to prevent it from being triggered again
-        DOMHelper.removeEventListener('reveal-game-btn', 'click', handleRevealGameClick);
-    }
-
     DOMHelper.addEventListener('reveal-game-btn', 'click', handleRevealGameClick);
 }
 
