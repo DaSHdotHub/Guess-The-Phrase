@@ -84,11 +84,7 @@ class QuizApp {
         do {
             this.randomQuestionNumber = Math.floor(Math.random() * this.data.length);
         } while (this.alreadyQuestioned.includes(this.randomQuestionNumber));
-        this.alreadyQuestioned.push(this.randomQuestionNumber);
-        if (this.alreadyQuestioned.length === this.data.length) {
-            this.gameFinished();
-        }
-
+        
         let questionObject = this.data[this.randomQuestionNumber];
         let wrongOptions = this.data[this.randomQuestionNumber].wrong_options;
         let numberOfPossibleAnswers = DOMHelper.getElementById('answer-button-container').children.length;
@@ -101,6 +97,7 @@ class QuizApp {
         for (let i = 0; i < numberOfPossibleAnswers; i++) {
             DOMHelper.setTextContent(`answer${i + 1}`,this.displayOptions[i].displayValue);
         }
+        this.alreadyQuestioned.push(this.randomQuestionNumber);
     }
 
     /**
@@ -139,7 +136,11 @@ class QuizApp {
                 this.incrementScore('correct-score');
                 this.flashElement('correct');
                 this.showCorrectPhraseForDuration(5000, () => {
-                    this.displayNextQuestion();
+                    if (this.alreadyQuestioned.length === this.data.length) {
+                        this.gameFinished();
+                    } else {
+                        this.displayNextQuestion();
+                    }
 
                 });
             } else {
@@ -205,7 +206,7 @@ class QuizApp {
     }
 
     /**
-     * Pulses either the correct or incorrect row for visual feedback.
+     * Pulses either #incorrect or #type for visual feedback.
      * 
      * @param {string} type - Type of score to pulse green or red.
      */
@@ -239,7 +240,7 @@ class QuizApp {
 
     /**
      * On finish alert the user, reset the alreadyQuestioned Array, reset the game-section of the DOM.
-     * Also remove the event listener so it wont be stacked on a new gamerun.
+     * Add a new event listener to reveal-game-btn as the old one was already removed
      */
     gameFinished() {
         this.alreadyQuestioned = [];
@@ -247,6 +248,7 @@ class QuizApp {
         DOMHelper.setDisplayStyle('game','none');
         DOMHelper.setDisplayStyle('reveal-game-btn','flex');
         DOMHelper.addEventListener('reveal-game-btn', 'click', handleRevealGameClick);
+        DOMHelper.setTextContent('display-hint','Wait for the next game to start...');
     }
 }
 
