@@ -118,44 +118,42 @@ No Frameworks were used; *vanilla* JavaScript is the key to this project.
 
 The website was tested on both Android and iOS devices. Desktop and various browsers mentioned in the [Browser Compatibility](#browser-compatibility) section.
 
-[...]
-
-
-
 ### Features Testing
 
 The testing was split into visuals and logic.
 
 #### **Visuals**
-| Actio                        	| Reactio            	| Test    	|
-|------------------------------	|--------------------	|---------	|
-| Navbar: hover                 	| Hovered section title enlarged            	| success 	|
-| Section: hover                	| shadow appearing   	| success 	|
-| Audio-Button: hover           	| enlarge inner Text            	| success 	|
-| Audio-Button: hover           	| highlight          	| success 	|
-| Audio-Button: click           	| show Audio-Control 	| success 	|
-| Audio-Button: click           	| hide Audio-Button  	| success 	|
-| Correct Score: changeOfValue     	| highlight          	| success 	|
-| InCorrect Score: changeOfValue   	| highlight          	| success 	|
-| Phrase: User Answered Correctly 	| highlight          	| success 	|
-| Phrase: Uuser Answered Correctly 	| showTimer          	| success 	|
-| On display of next phrase            	| Hint is closed     	| success 	|
-| Footer-Icon: hover           	| Icon is enlarged     	| success 	|
+| Action                                 | Expected Reaction                           | Test Result |
+|----------------------------------------|---------------------------------------------|-------------|
+| Navbar: Hover                          | Enlarged hovered section title              | Success     |
+| Section: Hover                         | Shadow appears                              | Success     |
+| Audio Button: Hover                    | Enlarged inner text                         | Success     |
+| Audio Button: Hover                    | Highlight                                   | Success     |
+| Audio Button: Click                    | Displays audio control                      | Success     |
+| Audio Button: Click                    | Hides audio button                          | Success     |
+| Correct Score: Value Change            | Highlight                                   | Success     |
+| Incorrect Score: Value Change          | Highlight                                   | Success     |
+| Phrase: User Answers Correctly         | Highlight                                   | Success     |
+| Phrase: User Answers Correctly         | Timer is displayed                          | Success     |
+| Display of Next Phrase                 | Hint is closed                              | Success     |
+| Footer Icon: Hover                     | Icon enlarges                               | Success     |
+
 
 #### **Logic**
 
-| Actio                  	| Reactio                             	| Test    	|
-|------------------------	|-------------------------------------	|---------	|
-| Navbar: click           	| Navigate to section                 	| success 	|
-| Audio-Control: play     	| Play audio                          	| success 	|
-| Audio-Control: play     	| Stop other audio                    	| success 	|
-| InCorrect-Answer: click 	| InCorrect Counter + 1               	| success 	|
-| Correct-Answer: click   	| Correct Counter + 1                 	| success 	|
-| Correct-Answer: click   	| Display Correct Phrase              	| success 	|
-| Correct-Answer: click   	| Disable Answer Buttons with timeout 	| success 	|
-| Hint: click             	| Toggle display of Hint section      	| success 	|
-| All answers correct    	| Alert - new game?                   	| success 	|
-| From 2nd Game          	| Result restored to 0                	| success 	|
+| Action                                | Expected Reaction                           | Test Result |
+|---------------------------------------|---------------------------------------------|-------------|
+| Navbar: Click                         | Navigates to section                        | Success     |
+| Audio Control: Play                   | Audio plays                                 | Success     |
+| Audio Control: Play                   | Stops other audio                           | Success     |
+| Incorrect Answer: Click               | Incorrect counter increases by 1            | Success     |
+| Correct Answer: Click                 | Correct counter increases by 1              | Success     |
+| Correct Answer: Click                 | Displays correct phrase                     | Success     |
+| Correct Answer: Click                 | Disables answer buttons after timeout       | Success     |
+| Hint: Click                           | Toggles display of hint section             | Success     |
+| All Answers Correct                   | Displays "New game?" alert                  | Success     |
+| From 2nd Game Onwards                 | Resets result to 0                          | Success     |
+
 
 ### Lighthouse Performance
 
