@@ -4,7 +4,8 @@ class QuizApp {
         this.randomQuestionNumber = null;
         this.displayOptions = [];
         this.alreadyQuestioned = [];
-        //bind future event listeners to instance variable
+        //Remove old event listener if a e.g. 2nd game is started
+        document.getElementById('answer-button-container').removeEventListener("click", this.boundCheckAnswer);
         this.boundCheckAnswer = this.checkAnswer.bind(this);
     }
 
@@ -235,7 +236,7 @@ class QuizApp {
         alert("Congratulation! You've corrected all phrases in this game. Press ok if you want to play again.");
         document.getElementById('game').style.display = "none";
         document.getElementById('reveal-game-btn').style.display = 'flex';
-        document.getElementById('answer-button-container').removeEventListener("click", this.boundCheckAnswer);
+        
 
     }
 }
@@ -288,15 +289,20 @@ function revealAudioBtn(buttonId, audioControlId) {
 }
 
 /**
-*Reveal the display of the quiz
+*Reveal the display of the quiz and reset the event listener
 */
 function revealGame() {
-    document.getElementById('reveal-game-btn').addEventListener('click', function (event) {
-        document.getElementById('game').style.display = "block";
-        event.target.style.display = "none";
+    let revealGameButton = document.getElementById('reveal-game-btn');
+
+    function startGame(event) {
+        document.getElementById('game').style.display='block';
+        event.target.style.display='none'
         let app = new QuizApp();
         app.init();
-    });
+        revealGameButton.removeEventListener('click', startGame);
+    }
+
+    revealGameButton.addEventListener('click', startGame);
 }
 
 /**
