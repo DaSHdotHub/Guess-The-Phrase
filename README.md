@@ -70,7 +70,15 @@ How to Features were tested
 
 ### Lighthouse Performance
 
-Lighthouse Performance from DevTools
+#### **Mobile**
+Almost perfect score:
+![Mobile result](assets/media/doc/validator/lighthouse_mobile_small.webp).
+You can also view the full [report!](assets/media/doc/validator/lighthouse_mobile.html)
+
+#### **Desktop**
+Perfect score!
+![Desktop result](assets/media/doc/validator/lighthouse_desktop_small.webp).
+You can also view the full [report!](assets/media/doc/validator/lighthouse_desktop.html)
 
 ### Validator Testing
 
@@ -78,15 +86,24 @@ Introduction to validator testing.
 
 #### HTML - W3C - Markup Validation Service
 
-Details and results of your HTML validation testing here.
+No Errors found, trailing slashes from special tags like '<meta>' were removed for not having any 'INFO' messages in the validator.
+<details>
+![HTML result](assets/media/doc/validator/w3c_html_result.webp)
+</details>
 
 #### CSS - W3C - CSS Validation Service
 
-Details and results of your CSS validation testing here.
+No Errors found, warnings were displayed. Imported Fonts could not be checked. CSS variables are currently not statically checked.
+<details>
+![CSS result](assets/media/doc/validator/w3c_css_result.webp)
+</details>
 
 #### JS Validation
 
-Details and results of your CSS validation testing here.
+No Errors found, two warnings. Async functions are only available with jshint from ES8
+<details>
+![CSS result](assets/media/doc/validator/w3c_css_result.webp)
+</details>
 
 ### Browser Compatibility
 
