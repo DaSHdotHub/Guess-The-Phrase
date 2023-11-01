@@ -153,28 +153,48 @@ The error does not hinder any functionality of the webapp or dose have any other
 
 ## Credits
 
-General credit acknowledgements.
+### **Inspirations**
 
-### Software
+For this project, my assigned mentor encouraged me to go for a quiz game, after a short use of search engines I found this website <br>
+https://www.ef.co.uk/english-resources/english-quotes/famous/ (Link was last checked checked on 01.11.2023) <br>
+Therefore my idea was born to make a game of guessing the correct phrases.
 
-- Visual Studio Code as IDE with following Extensions:
+All design patterns were created by myself.
+
+### **Software**
+
+* <strong>Visual Studio Code</strong> as IDE with following Extensions:
   <details>
-  <summary>VExtensions:</summary>
+  <summary>Extensions:</summary>
   <img src="assets/media/doc/VisualCodeExtensions.webp" alt="Visual Studio Code Extensions">
   </details>
 
-- CodeAnywhere as IDE, was changed for VSCode due to limitations during the project.
+* <strong>CodeAnywhere</strong> as IDE, was changed in favour of VSCode due to restrictions in CodeAnywhere.
+* <strong>QuickTime Player</strong> in combinatiion with <strong>VB Cable</strong> for creating the recordings for the audio files, also trimming them for them just to have the correct length.
+* <strong>Google Chrome</strong> for the main development
+* <strong>Chrome Dev Tools</strong> for the main development, debugging and logging.
+* <strong>Slack</strong> for interaction with my cohort and my mentor.
 
-Software credits go here.
+### **Hardware**
 
-### Hardware
+**Used for development:** <br>
+* MacBook Pro M1 (2020)
 
-Hardware credits go here.
+**Used for Testing:** <br>
+* MacBook Pro M1 (2020)
+* Redmi 11S
+* iPhone SE (2022)
+* iPhone 13 Pro
+* iPhone 14 Pro Max
 
-### Inspirations
+### **Resources**
 
-List or details of inspirations go here.
+#### Media
+* The texts for introduction, howto and rules were written down by myself, afterwards they were altered by ChatGPT v4 to have a specific language.
+* Audio was created with - https://www.naturalreaders.com/online/ (Link was last checked checked on 01.11.2023)
+* Images and Screenshots were converted by webservice -  https://convertio.co/ (Link was last checked checked on 01.11.2023)
+* Browser compatibility - https://godban.github.io/browsers-support-badges/ (Link was last checked checked on 01.11.2023)
 
-### Resources
+### **Also**
 
-* Browser compatibility - https://godban.github.io/browsers-support-badges/
+* Big thanks to my wife and my child who are always supporting me at their best :-) 
