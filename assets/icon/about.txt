@@ -1,6 +1,6 @@
 This favicon was generated using the following font:
 
-- Font Title: Sunshiney
-- Font Author: Copyright (c) 2010 by Font Diner, Inc DBA Sideshow. All rights reserved.
-- Font Source: http://fonts.gstatic.com/s/sunshiney/v24/LDIwapGTLBwsS-wT4vcgE8moUePWkg.ttf
-- Font License: Apache License, version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html))
+- Font Title: Ysabeau Infant
+- Font Author: Copyright 2023 The Ysabeau Project Authors (https://github.com/CatharsisFonts/Ysabeau)
+- Font Source: http://fonts.gstatic.com/s/ysabeauinfant/v1/hv-ClzpqOkkV94kBTQVdX1EWI9B0V-HEmd9JmTQYFo8HK5ChLwKH6A.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
