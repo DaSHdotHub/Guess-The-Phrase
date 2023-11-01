@@ -2,49 +2,41 @@
 
 ## Introduction
 
-[Guess The Phrase]() is a fun quiz game featuring 25 phrases. These phrases have been sourced from movies, theaters, books, and even pangrams. However, somewhere along the line, something went awry. A computer algorithm jumbled the phrases and interjected them with <i>IT key- and buzzwords</i>. Now, it's up to the user to correct the mistakes made by the algorithm.
+[Guess The Phrase]() is a fun quiz game that features 25 phrases. These phrases, sourced from movies, theaters, books, and even pangrams, have been jumbled by a computer algorithm that added *IT key- and buzzwords*. Now, it's up to the user to correct the mistakes made by the algorithm.
 
-The primary goal of this game isn't for the user to compete against a computer or another player, but rather to enjoy their time and select the correct answer for each altered phrase. Suitable for all ages.
+The primary goal of this game is not for the user to compete against a computer or another player, but rather to enjoy their time and select the correct answer for each altered phrase. Suitable for all ages.
 
-![Resposive Mock](assets/media/doc/resposiveMock.webp)
+![Responsive Mock](assets/media/doc/resposiveMock.webp)
 
 ## Table of Contents
 
-- [Guess The Phrase](#guess-the-phrase)
-  - [Introduction](#introduction)
-  - [Table of Contents](#table-of-contents)
-  - [Intro](#intro)
-  - [Features](#features)
-    - [Header](#header)
-    - [Main](#main)
-    - [Footer](#footer)
-    - [Future Features](#future-features)
-  - [Design](#design)
-  - [Technologies](#technologies---libs--sources)
-  - [Frameworks Software Hardware](#frameworks-software-hardware)
-    - [Frameworks](#frameworks)
-    - [Software](#software)
-    - [Hardware](#hardware)
-  - [Manual Testing](#manual-testing)
-    - [Features Testing](#features-testing)
-    - [Lighthouse Performance](#lighthouse-performance)
-    - [Validator Testing](#validator-testing)
-      - [HTML - W3C - Markup Validation Service](#html---w3c---markup-validation-service)
-      - [CSS - W3C - CSS Validation Service](#css---w3c---css-validation-service)
-      - [JS Validation](#js-validation)
-    - [Browser Compatibility](#browser-compatibility)
-    - [Screen size responsiveness](#screen-size-responsiveness)
-    - [Bugs resolved and unresolved](#bugs-resolved-and-unresolved)
-  - [Deployment](#deployment)
-    - [**GitHub Pages**](#github-pages)
-    - [**Local run**](#local-run)
-  - [Credits](#credits)
-    - [Inspirations](#inspirations)
-    - [Resources](#resources)
+- [Introduction](#introduction)
+- [Features](#features)
+  - [Header](#header)
+  - [Main](#main)
+  - [Footer](#footer)
+  - [Future Features](#future-features)
+- [Design](#design)
+- [Technologies, Libraries & Sources](#technologies-libs--sources)
+  - [Technologies](#technologies)
+  - [Libraries & Sources](#libs--sources)
+- [Frameworks, Software & Hardware](#frameworks-software-hardware)
+  - [Frameworks](#frameworks)
+  - [Software](#software)
+  - [Hardware](#hardware)
+- [Manual Testing](#manual-testing)
+  - [Features Testing](#features-testing)
+  - [Lighthouse Performance](#lighthouse-performance)
+  - [Validator Testing](#validator-testing)
+  - [Browser Compatibility](#browser-compatibility)
+  - [Screen size responsiveness](#screen-size-responsiveness)
+  - [Bugs](#bugs-resolved-and-unresolved)
+- [Deployment](#deployment)
+- [Credits](#credits)
+  - [Inspirations](#inspirations)
+  - [Resources](#resources)
 
-## Intro
 
-Introductory content goes here.
 
 ## Features
 
@@ -64,67 +56,71 @@ Footer-specific content here.
 
 ### Future Features (not planned)
 
-* Attach a Backend for e.g. Highscore functionality, greater pool of questions/ phrases
-* Add more display languages to the frontend, e.g german, french.
-* Add similar quiz games in e.g. new frames or tabs
+- Attach a Backend, e.g., for Highscore functionality, larger pool of questions/phrases.
+- Add more display languages to the frontend, e.g., German, French.
+- Introduce similar quiz games in, e.g., new frames or tabs.
 
 ## Design
 
+[Add your design details here]
 
-
-## Technologies - Libs & Sources
+## Technologies, Libraries & Sources
 
 ### **Technologies**
 
- * [HTML5](https://en.wikipedia.org/wiki/HTML5)
- * [CSS3](https://en.wikipedia.org/wiki/CSS)
- * [Javascirpt](https://en.wikipedia.org/wiki/JavaScript)
- * [Oop](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming) - Concept of Object-oriented programming
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- [OOP](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming) - Concept of Object-Oriented Programming
 
-### **Libs & Sources**
+### **Libraries & Sources**
 
-* [Git](https://git-scm.com/) - For vesion control.
-* [Github](https://github.com/)  - Deployment of the website and storing the files online.
-* [Google Fonts](https://fonts.google.com/)  - Import main fonts for the website.
-* [Am I Responsive](https://ui.dev/amiresponsive) - Mockup responsive picture for the README file.
-* [W3C Javascript](https://www.w3schools.com/js/js_callback.asp) - Howto: Callbacks, Async/ Await functionality
-* [GeeksForGeeks](https://www.geeksforgeeks.org/css-gradients/) - Howto: CSS Gradients, also pulse animnations
+- [Git](https://git-scm.com/) - For version control.
+- [GitHub](https://github.com/) - Deployment of the website and storing the files online.
+- [Google Fonts](https://fonts.google.com/) - Imported main fonts for the website.
+- [Am I Responsive](https://ui.dev/amiresponsive) - Mockup responsive image for the README file.
+- [W3C Javascript](https://www.w3schools.com/js/js_callback.asp) - Guide on Callbacks, Async/Await functionality.
+- [GeeksForGeeks](https://www.geeksforgeeks.org/css-gradients/) - Guide on CSS Gradients and pulse animations.
 
-## Frameworks Software Hardware
+## Frameworks, Software & Hardware
 
 ### **Frameworks**
 
-* No Frameworkds were used, <i>vanilla</i> JavaScript is key of this project.
+No Frameworks were used; *vanilla* JavaScript is the key to this project.
 
 ### **Software**
 
-* <strong>Visual Studio Code</strong> as IDE with following Extensions:
+- **Visual Studio Code** as IDE with the following Extensions:
   <details>
   <summary>Extensions:</summary>
   <img src="assets/media/doc/VisualCodeExtensions.webp" alt="Visual Studio Code Extensions">
   </details>
-
-* <strong>CodeAnywhere</strong> as IDE, was changed in favour of VSCode due to restrictions in CodeAnywhere.
-* <strong>QuickTime Player</strong> in combinatiion with <strong>VB Cable</strong> for creating the recordings for the audio files, also trimming them for them just to have the correct length.
-* <strong>Google Chrome</strong> for the main development
-* <strong>Chrome Dev Tools</strong> for the main development, debugging and logging.
-* <strong>Slack</strong> for interaction with my cohort and my mentor.
+  
+- **CodeAnywhere** as IDE, switched in favor of VSCode due to restrictions in CodeAnywhere.
+- **QuickTime Player** in combination with **VB Cable** for creating the recordings for the audio files and trimming them to the correct length.
+- **Google Chrome** for the main development.
+- **Chrome Dev Tools** for the main development, debugging, and logging.
+- **Slack** for interaction with my cohort and mentor.
 
 ### **Hardware**
 
-**Used for development:** <br>
-* MacBook Pro M1 (2020)
+**Used for development:** 
+- MacBook Pro M1 (2020)
 
-**Used for Testing:** <br>
-* MacBook Pro M1 (2020)
-* Redmi 11S
-* iPhone SE (2022)
-* iPhone 13 Pro
-* iPhone 14 Pro Max
+**Used for Testing:** 
+- MacBook Pro M1 (2020)
+- Redmi 11S
+- iPhone SE (2022)
+- iPhone 13 Pro
+- iPhone 14 Pro Max
 
 ## Manual Testing
 
-The website was tested on Android as well as on iOS devices. Desktop and different browsers mentioned in the [Browser Compatibility](#browser-compatibility).
+The website was tested on both Android and iOS devices. Desktop and various browsers mentioned in the [Browser Compatibility](#browser-compatibility) section.
+
+[...]
+
+
 
 ### Features Testing
 
